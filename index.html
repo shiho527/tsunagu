@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>pronavi</title>
+    <meta
+      name="description"
+      content="テキストテキストテキストテキストテキストテキスト"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>pronavi</title>
-  <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/favicon.png">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1 class="header-logo">
+          <a href="#">
+            <img src="img/logo.png" alt="header-logo" />
+          </a>
+        </h1>
 
-<body>
-  <header>
-    <a href="#">
-      <img src="img/logo.png" alt="header-logo">
-    </a>
-  </header>
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#about"
+                ><span class="material-symbols-outlined">computer</span
+                >プロナビとは</a
+              >
+            </li>
+            <li>
+              <a href="#reason"
+                ><span class="material-symbols-outlined">check_circle</span
+                >選ばれる理由</a
+              >
+            </li>
+            <li>
+              <a href="#support"
+                ><span class="material-symbols-outlined">school</span
+                >学習サポート</a
+              >
+            </li>
+            <li>
+              <a href="#price"
+                ><span class="material-symbols-outlined">event_note</span
+                >受講プラン</a
+              >
+            </li>
+            <li>
+              <a href="#faq"
+                ><span class="material-symbols-outlined">chat_bubble</span
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-  <main>
-    <section class="mainvisual">
+        <a href="#" class="btn btn-gradient"
+          ><span>無料カウンセリングを予約する</span></a
+        >
+      </div>
+    </header>
 
-    </section>
+    <main>
+      <section class="mainvisual"></section>
 
-    <section class="about">
+      <section class="about" id="about"></section>
 
-    </section>
-    
-    <section class="voice">
+      <section class="voice"></section>
 
-    </section>
+      <section class="reason" id="reason"></section>
 
-    <section class="reason">
+      <section class="study"></section>
 
-    </section>
+      <section class="flow"></section>
 
-    <section class="study">
+      <section class="instructors"></section>
 
-    </section>
+      <section class="support" id="support"></section>
 
-    <section class="flow">
+      <section class="price" id="price"></section>
 
-    </section>
+      <section class="faq" id="faq"></section>
+    </main>
 
-    <section class="instructors">
+    <footer></footer>
 
-    </section>
-
-    <section class="support">
-
-    </section>
-    
-    <section class="price">
-
-    </section>
-  </main>
-
-  <footer></footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
