@@ -16,10 +16,17 @@ html {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 25px;
   margin-bottom: 40px;
   font-family: "M PLUS 1", sans-serif;
-  font-weight: 500; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+  font-weight: 400; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+}
+
+.section-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  color: #00a9ff;
 }
 
 
@@ -37,6 +44,23 @@ html {
 
 
 /* reason */
+.section-header {
+  text-align: left;
+  margin-left: 0;
+}
+
+.reason-content {
+  display: flex;
+}
+
+#reason p {
+  margin-bottom: 15px;
+}
+
+#reason img {
+  width: 480px;
+  height: 300px;
+}
 
 
 /* study */
