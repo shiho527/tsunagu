@@ -18,15 +18,27 @@ html {
 .section-title {
   font-size: 25px;
   margin-bottom: 40px;
-  font-family: "M PLUS 1", sans-serif;
   font-weight: 400; /* 太さ調整（400=標準, 500=中太, 700=太字） */
 }
 
 .section-subtitle {
+  position: relative;
   font-size: 14px;
   letter-spacing: 0.1em;
   margin-bottom: 5px;
+  padding-left: 60px;
   color: #00a9ff;
+}
+
+.section-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* 線の長さ */
+  height: 2px; /* 線の太さ */
+  background-color: #99CC65; /* 線の色 */
 }
 
 
