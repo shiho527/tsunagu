@@ -1,5 +1,103 @@
 @charset "UTF-8";
+/* 共通 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
 
 html {
   font-size: 100%;
+}
+
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 500; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+}
+
+
+/* header */
+
+
+/* main */
+/* mainvisual */
+
+
+/* about */
+
+
+/* voice */
+
+
+/* reason */
+
+
+/* study */
+
+
+/* flow */
+
+
+/* instructors */
+
+
+/* support */
+
+
+/* price */
+
+/* footer */
+
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  /* 共通 */
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+/* header */
+
+
+/* main */
+/* mainvisual */
+
+
+/* about */
+
+
+/* voice */
+
+
+/* reason */
+
+
+/* study */
+
+
+/* flow */
+
+
+/* instructors */
+
+
+/* support */
+
+
+/* price */
+
+/* footer */
+
 }
