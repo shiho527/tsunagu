@@ -8,6 +8,10 @@ html {
   font-size: 100%;
 }
 
+a {
+  display: inline-block;
+}
+
 .section-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -38,12 +42,146 @@ html {
   transform: translateY(-50%);
   width: 40px; /* 線の長さ */
   height: 2px; /* 線の太さ */
-  background-color: #99CC65; /* 線の色 */
+  background-color: #99cc65; /* 線の色 */
 }
 
-
 /* header */
+#header {
+  position: fixed; /* スクロールしても固定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
 
+/* ヘッダー全体レイアウト */
+#header .section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* ロゴ */
+.header-logo img {
+  width: 140px;
+  height: auto;
+}
+
+/* 右側コンテンツ（ナビ＋ボタン） */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* ロゴとの間隔 */
+}
+
+/* ================================
+  ナビゲーションメニュー
+================================ */
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #00a9ff; /* メインブルー */
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+/* アイコン（Material Symbols） */
+.material-symbols-outlined {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+/* hoverアニメーション */
+.nav-menu a:hover {
+  color: #00a9ff;
+}
+
+.nav-menu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: 3px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 90%;
+}
+
+/* ================================
+  無料カウンセリングボタン
+================================ */
+.btn-gradient {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #66ccff, #00a9ff);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
+}
+
+/* 光の筋（キラッと動く） */
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+/* hoverで光る */
+.btn-gradient:hover::before {
+  animation: shine 0.9s forwards;
+}
+
+.btn-gradient:hover {
+  opacity: 0.95;
+}
+
+/* クリックしたとき（押し込み感） */
+.btn-gradient:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 5px rgba(0, 153, 204, 0.3);
+}
+
+/* 光のアニメーション */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 
 /* main */
 /* mainvisual */
@@ -51,9 +189,7 @@ html {
 
 /* about */
 
-
 /* voice */
-
 
 /* reason */
 .section-header {
@@ -74,23 +210,17 @@ html {
   height: 300px;
 }
 
-
 /* study */
-
 
 /* flow */
 
-
 /* instructors */
 
-
 /* support */
-
 
 /* price */
 
 /* footer */
-
 
 /* レスポンシブ */
 @media (max-width: 768px) {
@@ -104,38 +234,27 @@ html {
     height: auto;
   }
 
-/* header */
+  /* header */
 
+  /* main */
+  /* mainvisual */
 
-/* main */
-/* mainvisual */
+  /* about */
 
+  /* voice */
 
-/* about */
+  /* reason */
 
+  /* study */
 
-/* voice */
+  /* flow */
 
+  /* instructors */
 
-/* reason */
+  /* support */
 
+  /* price */
 
-/* study */
-
-
-/* flow */
-
-
-/* instructors */
-
-
-/* support */
-
-
-/* price */
-
-/* footer */
-
+  /* footer */
 }
 /* header */
-
