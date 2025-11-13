@@ -21,15 +21,13 @@ a {
 
 .section-title {
   font-size: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 400; /* 太さ調整（400=標準, 500=中太, 700=太字） */
 }
 
 .section-subtitle {
   position: relative;
   font-size: 14px;
-  letter-spacing: 0.1em;
-  margin-bottom: 5px;
   padding-left: 60px;
   color: #00a9ff;
 }
@@ -265,17 +263,42 @@ main {
   margin-left: 0;
 }
 
+.reason-title {
+  display: flex;
+  margin: 10px 0;
+}
+
+.reason-title h3 {
+  margin-left: 70px;
+}
+
+.reason-heading {
+  background-color: #fff47f;
+  padding: 0.2em 0; /* 上下に少し余白をつけて自然に */
+}
+
 .reason-content {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 #reason p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #reason img {
   width: 480px;
   height: 300px;
+  border-top-left-radius: 80px;
+}
+
+.reason-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* study */
