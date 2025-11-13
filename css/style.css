@@ -190,7 +190,7 @@ main {
 
 /* mainvisual */
 .mainvisual {
-  display: flex;           /* 横並びにする */
+  display: flex; /* 横並びにする */
   justify-content: flex-end; /* heroを右寄せ */
   padding-left: 16%;
   height: calc(100vh - 80px);
@@ -198,10 +198,10 @@ main {
 }
 
 .main-wrapper {
-  position:absolute;
-  top:35%;
-  left:5%;
-  z-index:10;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  z-index: 10;
   display: flex;
 }
 
