@@ -184,8 +184,41 @@ a {
 }
 
 /* main */
-/* mainvisual */
+main {
+  padding-top: 80px; /* ヘッダー固定分の余白 */
+}
 
+/* mainvisual */
+.mainvisual {
+  display: flex;           /* 横並びにする */
+  justify-content: flex-end; /* heroを右寄せ */
+  padding-left: 20%;        /* 左側に20%の空き */
+  height: calc(100vh - 80px);
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 80px); /* ヘッダー固定分を除く */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  float: right; /* 左側を空けるため右に寄せる */
+  border-bottom-left-radius: 80px; /* 角を少し丸く */
+}
+
+/* フェード用の重ねるdiv */
+.fade-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  border-bottom-left-radius: 80px; /* 同じ丸みを適用 */
+}
 
 /* about */
 
@@ -257,4 +290,3 @@ a {
 
   /* footer */
 }
-/* header */
