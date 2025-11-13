@@ -190,10 +190,45 @@ main {
 
 /* mainvisual */
 .mainvisual {
-  display: flex;           /* 横並びにする */
+  display: flex; /* 横並びにする */
   justify-content: flex-end; /* heroを右寄せ */
-  padding-left: 20%;        /* 左側に20%の空き */
+  padding-left: 16%;
   height: calc(100vh - 80px);
+  position: relative;
+}
+
+.main-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  z-index: 10;
+  display: flex;
+}
+
+.main-text h2 {
+  font-size: 48px;
+  color: #99cc65;
+  line-height: 1.5;
+}
+
+.main-text h2 span {
+  color: #a3e082;
+}
+
+.main-text .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #00a9ff, #0099cc);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main-text .btn:hover {
+  opacity: 0.8;
 }
 
 .hero {
