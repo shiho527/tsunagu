@@ -31,3 +31,5 @@ $(function () {
   // 5秒ごとに自動で背景切り替え
   setInterval(changeBackground, 5000);
 });
+
+// voice 卒業生の声
