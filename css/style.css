@@ -12,6 +12,10 @@ a {
   display: inline-block;
 }
 
+img {
+  width: 100%;
+}
+
 .section-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,7 +26,6 @@ a {
 /* ================================
   タイトル（左側）
 ================================ */
-
 
 .section-title {
   font-size: 25px;
@@ -70,7 +73,7 @@ a {
 .right-section-subtitle::before {
   content: "";
   position: absolute;
-  right: 0; 
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 40px;
@@ -86,7 +89,8 @@ a {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 30px;
-  background: linear-gradient(90deg, #66ccff, #00a9ff);
+  /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
+  background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
   color: #fff;
   font-weight: 500;
   text-decoration: none;
@@ -137,7 +141,6 @@ a {
     left: 150%;
   }
 }
-
 
 /* header */
 #header {
@@ -238,25 +241,23 @@ main {
 }
 
 .main-text h2 {
-  font-size: 48px;
+  font-size: 60px; /* figmaより大きめに */
   color: #99cc65;
   line-height: 1.5;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .main-text h2 span {
   color: #a3e082;
+  padding-left: 40px;
 }
 
 .main-text .btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 14px 32px;
-  font-size: 16px;
-  background: linear-gradient(90deg, #00a9ff, #0099cc);
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
+  padding: 16px 34px;
+  font-size: 18px;
 }
 
 .main-text .btn:hover {
@@ -285,6 +286,28 @@ main {
   background-position: center;
   display: none;
   border-bottom-left-radius: 80px; /* 同じ丸みを適用 */
+}
+
+.mainvisual-items img {
+  position: absolute;
+  width: 120px; /* 好きな大きさに調整 */
+  z-index: 10;
+}
+
+/* 個別の位置調整 */
+.rate-1 {
+  top: 40px;
+  left: 250px;
+}
+
+.rate-2 {
+  top: 40px;
+  left: 400px;
+}
+
+.rate-3 {
+  top: 40px;
+  left: 550px;
 }
 
 /* about */
@@ -346,7 +369,7 @@ main {
 }
 
 .voice-icon {
-  width: 100px; 
+  width: 100px;
   height: 100px;
   position: absolute;
   top: -30px;
