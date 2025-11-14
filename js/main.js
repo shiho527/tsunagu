@@ -33,3 +33,22 @@ $(function () {
 });
 
 // voice 卒業生の声
+
+
+
+
+
+
+// our support 詳しく見るボタン
+$(function () {
+  $('.detail-btn').click(function () {
+    $(this).next('.detail-text').slideToggle(300);
+
+    // ボタンの文言を切り替え（オプション）
+    if ($(this).text() === "詳しく見る") {
+      $(this).text("閉じる");
+    } else {
+      $(this).text("詳しく見る");
+    }
+  });
+});
