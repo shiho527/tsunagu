@@ -458,6 +458,123 @@ main {
 support
 ============================== */
 
+.support img {
+  width: 100%;
+}
+
+.support {
+  background-color: #EBF5E0;
+}
+
+.support li {
+  list-style: none;
+}
+
+.support-title-box {
+  text-align: center;
+  padding-block: 100px;
+}
+
+.support-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.support-text {
+  font-size: 22px;
+}
+
+/* point1~point4 */
+.support li {
+  margin-bottom: 40px;
+}
+
+.support-content {
+  background-color: white;
+  border-top-left-radius: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-inline: 40px;
+  text-align: left;
+  display: flex;
+}
+
+.support-content-left {
+  width: 80%;
+}
+
+.support-content-right {
+  width: 20%;
+}
+
+.support-subtitle {
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.support-subtitle-left {
+  margin-right: 40px;
+}
+
+.support-content-left p {
+  line-height: 2;
+}
+
+.detail-text p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* 詳しく見るボタン */
+/* .support .btn { */
+  /* position: relative; */
+  /* display: inline-block; */
+  /* padding: 12px 28px; */
+  /* border-radius: 30px; */
+  /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
+  /* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
+  /* color: #fff; */
+  /* font-weight: 500; */
+  /* text-decoration: none; */
+  /* font-size: 14px; */
+  /* overflow: hidden; */
+  /* transition: all 0.2s ease; */
+  /* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
+  /* margin-top: 20px; */
+/* } */
+
+.detail-btn {
+  display: none;
+}
+
+/* 詳しく見るボタン　アコーディオン */
+
+/* .detail-text { */
+  /* display: none; */
+  /* margin-top: 15px; */
+  /* line-height: 1.6; */
+
+/* } */
+
+/* 追加の装飾たち */
+.support-content {
+  border-top: 5px solid #7CC5A9;
+}
+
+.support-subtitle {
+  border-left: 4px solid #7CC5A9;
+  padding-left: 12px;
+}
+
+.support-content {
+  box-shadow: 0 7px 20px rgba(0,0,0,0.1);
+}
+
+
+
 /* ==============================
 price
 ============================== */
