@@ -19,6 +19,11 @@ a {
   box-sizing: border-box;
 }
 
+/* ================================
+  タイトル（左側）
+================================ */
+
+
 .section-title {
   font-size: 25px;
   margin-bottom: 10px;
@@ -43,82 +48,34 @@ a {
   background-color: #99cc65; /* 線の色 */
 }
 
-/* header */
-#header {
-  position: fixed; /* スクロールしても固定 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-}
-
-/* ヘッダー全体レイアウト */
-#header .section-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-}
-
-/* ロゴ */
-.header-logo img {
-  width: 140px;
-  height: auto;
-}
-
-/* 右側コンテンツ（ナビ＋ボタン） */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 40px; /* ロゴとの間隔 */
-}
-
 /* ================================
-  ナビゲーションメニュー
+  タイトル（右側）
 ================================ */
-.nav-menu ul {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+.right-section-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: right;
 }
 
-.nav-menu a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #00a9ff; /* メインブルー */
-  font-size: 13px;
-  transition: color 0.3s ease;
-}
-
-/* アイコン（Material Symbols） */
-.material-symbols-outlined {
-  font-size: 24px;
-  margin-bottom: 4px;
-}
-
-/* hoverアニメーション */
-.nav-menu a:hover {
+.right-section-subtitle {
+  position: relative;
+  font-size: 14px;
+  padding-right: 60px;
+  text-align: right;
   color: #00a9ff;
 }
 
-.nav-menu a::after {
+.right-section-subtitle::before {
   content: "";
-  display: block;
-  width: 0;
+  position: absolute;
+  right: 0; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
   height: 2px;
-  background-color: currentColor;
-  margin-top: 3px;
-  transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-  width: 90%;
+  background-color: #99cc65;
 }
 
 /* ================================
@@ -181,6 +138,83 @@ a {
   }
 }
 
+
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+#header .section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header-logo img {
+  width: 140px;
+  height: auto;
+}
+
+/* 右側コンテンツ（ナビ＋ボタン） */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* ロゴとの間隔 */
+}
+
+/* ================================
+  ナビゲーションメニュー
+================================ */
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #00a9ff; /* メインブルー */
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+/* アイコン（Material Symbols） */
+.material-symbols-outlined {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+/* hoverアニメーション */
+.nav-menu a:hover {
+  color: #00a9ff;
+}
+
+.nav-menu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: 3px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 90%;
+}
+
 /* main */
 main {
   padding-top: 80px; /* ヘッダー固定分の余白 */
@@ -188,7 +222,7 @@ main {
 
 /* mainvisual */
 .mainvisual {
-  display: flex; /* 横並びにする */
+  display: flex;
   justify-content: flex-end; /* heroを右寄せ */
   padding-left: 16%;
   height: calc(100vh - 80px);
@@ -254,6 +288,9 @@ main {
 }
 
 /* about */
+#about {
+  margin-bottom: 100px;
+}
 .about-inner {
   display: flex;
   align-items: center;
@@ -287,27 +324,20 @@ main {
 }
 
 /* voice */
-.voice {
-  /* background-color: #f9fcff; */
-  padding: 100px 0;
+#voice {
+  margin-bottom: 100px;
 }
 
 .voice-list {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 60px;
+  gap: 20px;
+  margin-top: 80px;
 }
 
 .voice-item {
-  width: calc(25% - 18px); /* ← 4列分に調整 */
-  background-color: #fff;
-  border: 2px solid #99cc65;
-  border-radius: 50px;
-  padding: 30px 24px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 23%; /* ▶ ４つ横並びを維持 */
+  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -315,23 +345,40 @@ main {
   transform: translateY(-5px);
 }
 
+.voice-icon {
+  width: 100px; 
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  z-index: 2;
+}
+
 .voice-icon img {
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
-  margin-bottom: 12px;
+  border: 4px solid #99cc65;
+}
+
+.voice-box {
+  background: #fffaed;
+  border: 2px solid #99cc65;
+  border-bottom-right-radius: 80px;
+  padding: 30px 10px;
+  min-height: 260px;
+  position: relative;
 }
 
 .voice-age {
   font-weight: bold;
-  color: #0099cc;
   margin-bottom: 10px;
+  text-align: right;
+  /* color: #00a9ff; */
 }
 
 .voice-text {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.6;
 }
 
 /* reason */
