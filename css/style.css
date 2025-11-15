@@ -553,6 +553,45 @@ main {
 }
 
 /* instructors */
+.instructors-container {
+  justify-content: space-between;
+}
+
+.instructors-item,
+.instructors-item2,
+.instructors-item3,
+.instructors-item4  {
+  width: 100%;
+}
+
+.instructors-content {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 50px;
+}
+
+.instructors-content2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 50px;
+}
+
+.instructors-container p::first-line {
+  font-size: 20px;   /* ← 好きな大きさに変更 */
+  font-weight: 600;  /* ← 太さも変更可能（任意） */
+}
+
+#instructors img {
+  width: 35%;
+}
+
+.instructors-content p,
+.instructors-content2 p {
+  width: 60%;
+}
 
 /* ==============================
 support
