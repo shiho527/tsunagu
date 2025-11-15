@@ -70,4 +70,14 @@ $(function () {
     slidesToShow: 3,       // ← 1画面に3枚
     slidesToScroll: 1      // ← 1回に1枚ずつ流れる
 });
+
+// 卒業生の声 スライダー
+$('.graduate-achievements-slider').slick({
+  autoplay: false,
+  arrows: true,
+  prevArrow: '<button class="graduate-achievements-slide-arrow prev-arrow">◀</button>',
+  nextArrow: '<button class="graduate-achievements-slide-arrow next-arrow">▶</button>',
+  slidesToShow: 3
+});
+
 });

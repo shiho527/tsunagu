@@ -476,6 +476,7 @@ support
 
 .support {
   background-color: #EBF5E0;
+  padding-bottom: 100px;
 }
 
 .support li {
@@ -497,7 +498,9 @@ support
   font-size: 22px;
 }
 
-/* point1~point4 */
+/* -----------------------------
+point1~point4
+----------------------------- */
 .support li {
   margin-bottom: 40px;
 }
@@ -589,16 +592,63 @@ support
 /* スライダー */
 .support-slider img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   /* border-radius: 10px; */
 }
 
 .support-slider {
-  padding-inline: 50px;
+  padding-inline: 40px;
 }
 .support-slider .slick-slide {
   padding: 0 20px;
+}
+
+/* ------------------------------
+卒業生の声
+------------------------------ */
+.graduate-achievements .section-header {
+  margin-top: 150px;
+  margin-bottom: 60px;
+}
+
+/* カードの画像調整 */
+.graduate-achievements-slider img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+/* カード間の余白 */
+.graduate-achievements-slider .slick-slide {
+  padding: 0 15px;
+  /* box-sizing: border-box; */
+}
+
+/* カスタム矢印の共通デザイン */
+.graduate-achievements-slide-arrow {
+  position: absolute;
+  top: 50%;                /* 画面の縦の中央に配置 */
+  transform: translateY(-50%);
+  z-index: 5;              /* スライダーより前に表示 */
+  background: #bee9ff;
+  /* border: 2px solid white; */
+  border: 2px solid #bee9ff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 左矢印 */
+.prev-arrow {
+  left: -30px;   /* スライダーの左外側へ */
+}
+
+/* 右矢印 */
+.next-arrow {
+  right: -30px;  /* スライダーの右外側へ */
 }
 
 /* ==============================
