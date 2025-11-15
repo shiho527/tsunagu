@@ -593,6 +593,8 @@ support
   height: 250px;
   object-fit: cover;
   /* border-radius: 10px; */
+  /* border-top-left-radius: 30px; */
+  border-bottom-right-radius: 40px;
 }
 
 .support-slider {
@@ -873,7 +875,12 @@ support
 footer
 ============================== */
 
-
+.footer-img-box img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 
 
