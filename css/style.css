@@ -405,11 +405,6 @@ main {
 }
 
 /* reason */
-.section-header {
-  text-align: left;
-  margin-left: 0;
-}
-
 .reason-title {
   display: flex;
   margin: 10px 0;
@@ -449,14 +444,76 @@ main {
 }
 
 /* study */
-#study .study-characters img {
-  width: 480px;
+#study {
+  margin: 20px 0;
+  padding: 30px 0;
+  background-color: #fffaed;
+}
+
+.study-text {
+  margin-bottom: 50px;
+}
+
+.study-text p {
+  margin-bottom: 20px;
+}
+
+.study-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.study-subtitle {
+  margin-bottom: 20px;
+}
+
+.study-main-title {
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 10px solid #99cc65;
+}
+
+.study-item {
+  background-color: white;
+  padding: 40px 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-right: 300px;
+}
+
+.study-text,
+.study-text2 {
+  padding-left: 150px;
+}
+
+.study-text p {
+  padding-bottom: 20px;
+}
+
+.study-img {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.study-characters {
+  width: 30%;
+}
+
+.study-characters img {
   height: 300px;
 }
 
-#study .study-phones img {
-  width: 300px;
-  height: 480px;
+.study-phones {
+  display: flex;
+  width: 60%;
+  gap: 30px;
+}
+
+.study-phones img {
+  height: 400px;
 }
 /* flow */
 
