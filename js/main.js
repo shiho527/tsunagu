@@ -81,13 +81,22 @@ $('.graduate-achievements-slider').slick({
 });
 
 
-const faqContainer = document.querySelector(".faq-contents");
-const toggles = faqContainer.querySelectorAll(".faq-toggle");
+// const faqContainer = document.querySelector(".faq-contents");
+// const toggles = faqContainer.querySelectorAll(".faq-toggle");
+
+// toggles.forEach((toggle) => {
+//   toggle.addEventListener("click", () => {
+//     toggle.parentNode.classList.toggle("active");
+//   });
+// });
+
+const toggles = document.querySelectorAll(".faq-toggle");
 
 toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
-    toggle.parentNode.classList.toggle("active");
+    toggle.closest(".faq").classList.toggle("active");
   });
 });
+
 
 });
