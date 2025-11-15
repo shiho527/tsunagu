@@ -39,6 +39,14 @@ $(function () {
 
 
 
+
+
+
+
+
+
+
+
 // our support 詳しく見るボタン
 $(function () {
   $('.detail-btn').click(function () {
@@ -51,4 +59,15 @@ $(function () {
       $(this).text("詳しく見る");
     }
   });
+
+// our support スライダー
+  $('.support-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 2500,   // ← 自動再生の速さ（1.5秒）
+    speed: 500,            // ← スライドの切り替え速度（0.5秒）
+    dots: true,
+    arrows: true,
+    slidesToShow: 3,       // ← 1画面に3枚
+    slidesToScroll: 1      // ← 1回に1枚ずつ流れる
+});
 });
