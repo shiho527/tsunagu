@@ -80,4 +80,14 @@ $('.graduate-achievements-slider').slick({
   slidesToShow: 3
 });
 
+
+const faqContainer = document.querySelector(".faq-contents");
+const toggles = faqContainer.querySelectorAll(".faq-toggle");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    toggle.parentNode.classList.toggle("active");
+  });
+});
+
 });
