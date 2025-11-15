@@ -555,9 +555,7 @@ support
   font-size: 22px;
 }
 
-/* -----------------------------
-point1~point4
------------------------------ */
+/* point1~point4 */
 .support li {
   margin-bottom: 40px;
 }
@@ -656,14 +654,21 @@ point1~point4
 
 .support-slider {
   padding-inline: 40px;
+  overflow-x: hidden;
 }
+
 .support-slider .slick-slide {
   padding: 0 20px;
 }
 
 /* ------------------------------
-卒業生の声
+卒業生の実績 graduate-achievements
 ------------------------------ */
+
+/* .graduate-achievements { */
+  /* overflow-x: hidden; */
+/* } */
+
 .graduate-achievements .section-header {
   margin-top: 150px;
   margin-bottom: 60px;
@@ -672,7 +677,7 @@ point1~point4
 /* カードの画像調整 */
 .graduate-achievements-slider img {
   width: 100%;
-  height: 450px;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -686,11 +691,11 @@ point1~point4
 /* カスタム矢印の共通デザイン */
 .graduate-achievements-slide-arrow {
   position: absolute;
-  top: 50%;                /* 画面の縦の中央に配置 */
+  top: 50%;
   transform: translateY(-50%);
-  z-index: 5;              /* スライダーより前に表示 */
+  z-index: 5;
   background: #bee9ff;
-  /* border: 2px solid white; */
+  border: 2px solid white;
   border: 2px solid #bee9ff;
   color: white;
   padding: 8px 14px;
@@ -700,17 +705,226 @@ point1~point4
 
 /* 左矢印 */
 .prev-arrow {
-  left: -30px;   /* スライダーの左外側へ */
+  left: -20px; 
+  /* スライダーの左外側へ */
 }
 
 /* 右矢印 */
 .next-arrow {
-  right: -30px;  /* スライダーの右外側へ */
+  right: -20px;
+  /* スライダーの右外側へ */
 }
 
 /* ==============================
-price
+料金 price
 ============================== */
+
+.price-head {
+  margin-block: 60px;
+}
+
+.price-container {
+  background-image: url("../img/price_bg_3.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-block: 160px;
+}
+
+.price-contents {
+  background-color: white;
+  max-width: 900px;
+  /* text-align: center; */
+  padding-block: 60px;
+  border-radius: 0 50px 0 50px;
+}
+
+.price-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 8px 16px;
+  /* padding-left: 60px; */
+  padding-left: 8%;
+  /* ↑調整の仕方 注意 */
+  margin-block: 40px;
+}
+
+.price-content li {
+  list-style-position: inside;
+  list-style: disc;
+  text-align: left;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.price-content li::before {
+  content: "✓";
+  color: #7CC5A9; /* グリーン */
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.price-title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 40px;
+  background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* price detail */
+.price-detail {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  align-items: baseline;
+}
+
+.price-detail p {
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.price-detail p:first-child {
+  margin-left: 48px; /* ← これ微調整 */
+}
+
+.price-detail span {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+  /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 料金の下線 */
+.price-detail-left {
+  position: relative;
+}
+
+.price-detail-left::after {
+  position: absolute;
+  content: "";
+  bottom: -16px;
+  left: 0;
+  width: 260px;
+  height: 3px;
+  background-color: #00a9ff;
+}
+
+
+/* ==============================
+質問 faq
+============================== */
+
+.faq-section {
+  margin-bottom: 200px;
+}
+
+.faq-section .section-header {
+  margin-block: 60px;
+}
+
+.faq-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.faq {
+  /* background-color: transparent; */
+  background-color: #f0faff;
+  border: 1px solid #99cc65;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3 ease;
+  /* font-weight: 400; */
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 6 Free";
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  font-weight: 400;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
 
 /* ==============================
 footer
