@@ -68,16 +68,35 @@ $(function () {
     dots: true,
     arrows: true,
     slidesToShow: 3,       // ← 1画面に3枚
-    slidesToScroll: 1      // ← 1回に1枚ずつ流れる
+    slidesToScroll: 1,      // ← 1回に1枚ずつ流れる
+
+    responsive: [
+    {
+      breakpoint: 768,      // ← スマホ幅（768px以下）
+      settings: {
+        slidesToShow: 1,    // ← 1枚表示に変更！
+        arrows: false,      // ← ボタン邪魔なら消す（任意）
+      }
+    }
+  ]
 });
 
-// 卒業生の声 スライダー
-$('.graduate-achievements-slider').slick({
-  autoplay: false,
-  arrows: true,
-  prevArrow: '<button class="graduate-achievements-slide-arrow prev-arrow">◀</button>',
-  nextArrow: '<button class="graduate-achievements-slide-arrow next-arrow">▶</button>',
-  slidesToShow: 3
+// 卒業生の実績 スライダー
+  $('.graduate-achievements-slider').slick({
+    autoplay: false,
+    arrows: true,
+    prevArrow: '<button class="graduate-achievements-slide-arrow prev-arrow">◀</button>',
+    nextArrow: '<button class="graduate-achievements-slide-arrow next-arrow">▶</button>',
+    slidesToShow: 3,
+
+    responsive: [
+    {
+      breakpoint: 768,   // ← 768px以下
+      settings: {
+        slidesToShow: 1, // ← 1枚だけ表示
+      }
+    }
+  ]
 });
 
 
@@ -90,6 +109,7 @@ $('.graduate-achievements-slider').slick({
 //   });
 // });
 
+// 質問 アコーディオン
 const toggles = document.querySelectorAll(".faq-toggle");
 
 toggles.forEach((toggle) => {
