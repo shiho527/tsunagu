@@ -1086,23 +1086,9 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* レスポンシブ */
+/* ==============================
+レスポンシブ
+============================== */
 @media (max-width: 768px) {
   /* 共通 */
   section {
@@ -1131,9 +1117,154 @@ footer {
 
   /* instructors */
 
-  /* support */
 
-  /* price */
 
-  /* footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+support
+------------------------------ */
+
+/* 詳しく見るボタン */
+.support .btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #66ccff, #00a9ff);
+  background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
+  margin-top: 20px;
+}
+
+.detail-btn {
+  display: none;
+}
+
+.detail-text {
+  display: none;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.support-title {
+  font-size: 28px;
+}
+
+.support-text {
+  font-size: 18px;
+}
+
+.support-content-left {
+  width: 100%;
+}
+
+.support-content-right {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* テキストと画像を縦並びに */
+.support-content {
+  flex-direction: column;
+  text-align: center; /* ★テキスト全体を中央寄せ */
+}
+
+/* ボタンを中央寄せ */
+.detail-btn {
+  display: block;
+  margin: 20px auto 0; /* ★中央にする */
+}
+
+/* 画像も中央へ */
+.support-content-right img {
+  margin: 0 auto;
+  display: block;
+  width: 50%; /* お好みで */
+}
+
+/* テキストは左寄せに戻す場合 */
+.support-content-left p {
+  text-align: left;
+}
+
+/* ------------------------------
+卒業生の実績
+------------------------------ */
+
+.graduate-achievements-slider img {
+  width: 80%;   
+  margin: 0 auto;
+  display: block;
+}
+
+/* 左矢印を内側に */
+.prev-arrow {
+  left: 5px;
+} 
+
+  /* 右矢印を内側に */
+.next-arrow {
+  right: 5px;
+}
+
+  /* 必要ならサイズも小さめにできる */
+.graduate-achievements-slide-arrow {
+  padding: 6px 10px;
+  transform: translateY(-50%);
+}
+
+/* ------------------------------
+price
+------------------------------ */
+
+.price-content {
+  grid-template-columns: 1fr;
+}
+
+/* ------------------------------
+faq 
+-------------------------------*/
+
+.faq-contents {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* ------------------------------
+footer
+------------------------------- */
+
+.footer-info .section-wrapper {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+/* 住所やSNSの余白 */
+.footer-sns-content {
+  margin-block: 50px;
+}
+
+
 }
