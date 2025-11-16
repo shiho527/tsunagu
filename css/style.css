@@ -540,6 +540,7 @@ main {
   border: 1px solid rgba(153, 204, 101, 0.2);
   background-color: #99cc65;
   background-color: rgba(153, 204, 101, 0.2);
+  padding: 5px;
 }
 
 .item-title {
@@ -553,10 +554,6 @@ main {
 }
 
 /* instructors */
-.instructors-container {
-  justify-content: space-between;
-}
-
 .instructors-item,
 .instructors-item2,
 .instructors-item3,
@@ -566,7 +563,7 @@ main {
 
 .instructors-content {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
   gap: 50px;
 }
@@ -574,23 +571,43 @@ main {
 .instructors-content2 {
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
   gap: 50px;
 }
 
 .instructors-container p::first-line {
-  font-size: 20px;   /* ← 好きな大きさに変更 */
-  font-weight: 600;  /* ← 太さも変更可能（任意） */
+  font-size: 20px; 
+  font-weight: 600;  /* ← 太さ*/
+  line-height: 2.6;
 }
 
 #instructors img {
   width: 35%;
 }
 
-.instructors-content p,
+.instructors-item img,
+.instructors-item3 img {
+  border-bottom-left-radius: 80px;
+}
+
+.instructors-item2 img,
+.instructors-item4 img {
+  border-bottom-right-radius: 80px;
+}
+
+.instructors-content p {
+  width: 60%;
+  border-left: 2px solid #99cc65;
+  border-bottom: 2px solid #99cc65;
+  padding-left: 15px;
+}
+
 .instructors-content2 p {
   width: 60%;
+  border-right: 2px solid #99cc65;
+  border-bottom: 2px solid #99cc65;
+  padding-right: 15px;
 }
 
 /* ==============================
