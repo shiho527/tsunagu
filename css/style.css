@@ -28,12 +28,14 @@ img {
 ================================ */
 
 .section-title {
+  text-align: left;
   font-size: 25px;
   margin-bottom: 10px;
   font-weight: 400; /* 太さ調整（400=標準, 500=中太, 700=太字） */
 }
 
 .section-subtitle {
+  text-align: left;
   position: relative;
   font-size: 14px;
   padding-left: 60px;
@@ -216,6 +218,38 @@ img {
 
 .nav-menu a:hover::after {
   width: 90%;
+}
+
+/* ================================
+  ハンバーガーメニュー
+================================ */
+.hamburger {
+  display: none; /* PCでは非表示 */
+  width: 30px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #00a9ff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* 開いた時 */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* main */
@@ -514,7 +548,7 @@ main {
 
 .study-phones img {
   height: 400px;
-  border-radius: 30px;  /* ← 角丸をつける */
+  border-radius: 30px; /* ← 角丸をつける */
 }
 /* flow */
 #flow {
@@ -557,7 +591,7 @@ main {
 .instructors-item,
 .instructors-item2,
 .instructors-item3,
-.instructors-item4  {
+.instructors-item4 {
   width: 100%;
 }
 
@@ -577,8 +611,8 @@ main {
 }
 
 .instructors-container p::first-line {
-  font-size: 20px; 
-  font-weight: 600;  /* ← 太さ*/
+  font-size: 20px;
+  font-weight: 600; /* ← 太さ*/
   line-height: 2.6;
 }
 
@@ -623,7 +657,7 @@ support
 }
 
 .support {
-  background-color: #EBF5E0;
+  background-color: #ebf5e0;
   padding-bottom: 100px;
 }
 
@@ -692,20 +726,20 @@ support
 
 /* 詳しく見るボタン */
 /* .support .btn { */
-  /* position: relative; */
-  /* display: inline-block; */
-  /* padding: 12px 28px; */
-  /* border-radius: 30px; */
-  /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
-  /* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
-  /* color: #fff; */
-  /* font-weight: 500; */
-  /* text-decoration: none; */
-  /* font-size: 14px; */
-  /* overflow: hidden; */
-  /* transition: all 0.2s ease; */
-  /* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
-  /* margin-top: 20px; */
+/* position: relative; */
+/* display: inline-block; */
+/* padding: 12px 28px; */
+/* border-radius: 30px; */
+/* background: linear-gradient(90deg, #66ccff, #00a9ff); */
+/* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
+/* color: #fff; */
+/* font-weight: 500; */
+/* text-decoration: none; */
+/* font-size: 14px; */
+/* overflow: hidden; */
+/* transition: all 0.2s ease; */
+/* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
+/* margin-top: 20px; */
 /* } */
 
 .detail-btn {
@@ -715,24 +749,24 @@ support
 /* 詳しく見るボタン　アコーディオン */
 
 /* .detail-text { */
-  /* display: none; */
-  /* margin-top: 15px; */
-  /* line-height: 1.6; */
+/* display: none; */
+/* margin-top: 15px; */
+/* line-height: 1.6; */
 
 /* } */
 
 /* 追加の装飾たち */
 .support-content {
-  border-top: 5px solid #7CC5A9;
+  border-top: 5px solid #7cc5a9;
 }
 
 .support-subtitle {
-  border-left: 4px solid #7CC5A9;
+  border-left: 4px solid #7cc5a9;
   padding-left: 12px;
 }
 
 .support-content {
-  box-shadow: 0 7px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* スライダー */
@@ -804,7 +838,7 @@ section,
 ------------------------------ */
 
 /* .graduate-achievements { */
-  /* overflow-x: hidden; */
+/* overflow-x: hidden; */
 /* } */
 
 .graduate-achievements .section-header {
@@ -843,7 +877,7 @@ section,
 
 /* 左矢印 */
 .prev-arrow {
-  left: -20px; 
+  left: -20px;
   /* スライダーの左外側へ */
 }
 
@@ -899,7 +933,7 @@ section,
 
 .price-content li::before {
   content: "✓";
-  color: #7CC5A9; /* グリーン */
+  color: #7cc5a9; /* グリーン */
   font-weight: 700;
   position: absolute;
   left: 0;
@@ -1130,7 +1164,7 @@ footer {
 }
 
 .footer-sns-item i {
-  font-size: 24px; 
+  font-size: 24px;
   margin-left: 10px;
 }
 
@@ -1196,14 +1230,134 @@ footer {
     height: auto;
   }
 
+
   /* header */
+  /* スマホでナビ非表示 */
+  /* #header {
+  display:flex;
+}
+  .header-right {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background: #363535be;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+  }
+
+
+  .header-right.open {
+    right: 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  } */
+
 
   /* main */
   /* mainvisual */
+  .mainvisual {
+  display: flex;
+  justify-content: flex-end; /* heroを右寄せ */
+  padding-left: 0;
+}
+
+.main-text h2 {
+  font-size: 60px; /* figmaより大きめに */
+  color: #99cc65;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.main-text h2 span {
+  color: #a3e082;
+  padding-left: 40px;
+}
+
+.main-text .btn {
+  margin-top: 0;
+}
+
+.mainvisual-items img {
+  width: 80px; 
+}
+
+/* 個別の位置調整 */
+.rate-1 {
+  top: 30px;
+  left: 30px;
+}
+
+.rate-2 {
+  top: 30px;
+  left: 120px;
+}
+
+.rate-3 {
+  top: 30px;
+  left: 210px;
+}
 
   /* about */
+  .about-inner {
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 60px; */
+}
+
+.about-text {
+  width: 100%;
+}
+
+
+.about-img {
+  width: 100%;
+}
+
+.about-img img {
+  width: 100%;
+  border-top-right-radius: 80px;
+}
 
   /* voice */
+.voice-list {
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+.voice-item {
+  width: 100%;
+}
+
+.voice-box {
+  padding: 10px;
+  min-height: 180px;
+}
+
+.voice-age {
+  text-align: left;
+  margin-bottom:30px;
+  margin-left: 80px;
+}
+
+.voice-text {
+  text-align: left;
+}
 
   /* reason */
 
@@ -1213,98 +1367,80 @@ footer {
 
   /* instructors */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------------
+  /* ------------------------------
 support
 ------------------------------ */
 
-/* 詳しく見るボタン */
-.support .btn {
-  position: relative;
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #66ccff, #00a9ff);
-  background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 14px;
-  overflow: hidden;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
-  margin-top: 20px;
-}
+  /* 詳しく見るボタン */
+  .support .btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #66ccff, #00a9ff);
+    background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
+    margin-top: 20px;
+  }
 
-.detail-btn {
-  display: none;
-}
+  .detail-btn {
+    display: none;
+  }
 
-.detail-text {
-  display: none;
-  margin-top: 15px;
-  line-height: 1.6;
-}
+  .detail-text {
+    display: none;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
 
-.support-title {
-  font-size: 28px;
-}
+  .support-title {
+    font-size: 28px;
+  }
 
-.support-text {
-  font-size: 18px;
-}
+  .support-text {
+    font-size: 18px;
+  }
 
-.support-content-left {
-  width: 100%;
-}
+  .support-content-left {
+    width: 100%;
+  }
 
-.support-content-right {
-  width: 100%;
-  margin-top: 20px;
-}
+  .support-content-right {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-/* テキストと画像を縦並びに */
-.support-content {
-  flex-direction: column;
-  text-align: center; /* ★テキスト全体を中央寄せ */
-}
+  /* テキストと画像を縦並びに */
+  .support-content {
+    flex-direction: column;
+    text-align: center; /* ★テキスト全体を中央寄せ */
+  }
 
-/* ボタンを中央寄せ */
-.detail-btn {
-  display: block;
-  margin: 20px auto 0; /* ★中央にする */
-}
+  /* ボタンを中央寄せ */
+  .detail-btn {
+    display: block;
+    margin: 20px auto 0; /* ★中央にする */
+  }
 
-/* 画像も中央へ */
-.support-content-right img {
-  margin: 0 auto;
-  display: block;
-  width: 50%; /* お好みで */
-}
+  /* 画像も中央へ */
+  .support-content-right img {
+    margin: 0 auto;
+    display: block;
+    width: 50%; /* お好みで */
+  }
 
-/* テキストは左寄せに戻す場合 */
-.support-content-left p {
-  text-align: left;
-}
+  /* テキストは左寄せに戻す場合 */
+  .support-content-left p {
+    text-align: left;
+  }
 
+  /* ------------------------------
 /* 背景ロゴ設置 */
 /* .bg-logo p { */
   /* font-size: 25vw; */
@@ -1325,36 +1461,37 @@ support
 卒業生の実績
 ------------------------------ */
 
-.graduate-achievements-slider img {
-  width: 80%;   
-  margin: 0 auto;
-  display: block;
-}
+  .graduate-achievements-slider img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
 
-/* 左矢印を内側に */
-.prev-arrow {
-  left: 5px;
-} 
+  /* 左矢印を内側に */
+  .prev-arrow {
+    left: 5px;
+  }
 
   /* 右矢印を内側に */
-.next-arrow {
-  right: 5px;
-}
+  .next-arrow {
+    right: 5px;
+  }
 
   /* 必要ならサイズも小さめにできる */
-.graduate-achievements-slide-arrow {
-  padding: 6px 10px;
-  transform: translateY(-50%);
-}
+  .graduate-achievements-slide-arrow {
+    padding: 6px 10px;
+    transform: translateY(-50%);
+  }
 
-/* ------------------------------
+  /* ------------------------------
 price
 ------------------------------ */
 
-.price-content {
-  grid-template-columns: 1fr;
-}
+  .price-content {
+    grid-template-columns: 1fr;
+  }
 
+  /* ------------------------------
 .price-btn {
   display: block;
   width: 80%;
@@ -1368,23 +1505,24 @@ price
 faq 
 -------------------------------*/
 
-.faq-contents {
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
+  .faq-contents {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
-/* ------------------------------
+  /* ------------------------------
 footer
 ------------------------------- */
 
-.footer-info .section-wrapper {
-  flex-direction: column-reverse;
-  text-align: center;
-}
+  .footer-info .section-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
-/* 住所やSNSの余白 */
-.footer-sns-content {
-  margin-block: 50px;
+  /* 住所やSNSの余白 */
+  .footer-sns-content {
+    margin-block: 50px;
+  }
 }
 
 /* ページトップボタン削除 */
