@@ -47,6 +47,18 @@ $(function () {
 
 
 
+// our supportより下 背景ロゴ
+$(window).on('scroll', function () {
+  const supportTop = $('#support').offset().top;  // support の位置
+  const scroll = $(window).scrollTop();           // 現在のスクロール量
+
+  if (scroll >= supportTop) {
+    $('.bg-logo p').addClass('show');   // support が画面トップ以上なら表示
+  } else {
+    $('.bg-logo p').removeClass('show'); // それより上なら消す
+  }
+});
+
 // our support 詳しく見るボタン
 $(function () {
   $('.detail-btn').click(function () {
@@ -99,16 +111,6 @@ $(function () {
   ]
 });
 
-
-// const faqContainer = document.querySelector(".faq-contents");
-// const toggles = faqContainer.querySelectorAll(".faq-toggle");
-
-// toggles.forEach((toggle) => {
-//   toggle.addEventListener("click", () => {
-//     toggle.parentNode.classList.toggle("active");
-//   });
-// });
-
 // 質問 アコーディオン
 const toggles = document.querySelectorAll(".faq-toggle");
 
@@ -116,6 +118,15 @@ toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
     toggle.closest(".faq").classList.toggle("active");
   });
+});
+
+// トップページに戻るボタン 必ずmain.最後に配置
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 800) {
+    $('.button_top').addClass('show');
+  } else {
+    $('.button_top').removeClass('show');
+  }
 });
 
 
