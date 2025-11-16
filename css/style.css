@@ -772,11 +772,15 @@ support
 /* スライダー */
 .support-slider img {
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
   /* border-radius: 10px; */
   /* border-top-left-radius: 30px; */
   border-bottom-right-radius: 40px;
+}
+
+.support-slider .slick-dots {
+  display: none !important;
 }
 
 .support-slider {
@@ -787,6 +791,47 @@ support
 .support-slider .slick-slide {
   padding: 0 20px;
 }
+
+/* support下 無料カウンセリングボタン */
+.support-btn {
+  display: none;
+}
+
+/* ------------------------------
+pronavi logo  our 背景に固定
+------------------------------ */
+
+.bg-logo {
+  position: relative;
+}
+
+.bg-logo p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vw;
+  font-weight: 700;
+  color: rgba(120, 120, 120, 0.05);
+  z-index: 0;      /* 完全に背景にする */
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.bg-logo p.show {
+  opacity: 1;       /* support に到達したら表示 */
+}
+
+section,
+.support,
+.price,
+.faq-section {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* ------------------------------
 卒業生の実績 graduate-achievements
@@ -944,6 +989,11 @@ support
   background-color: #00a9ff;
 }
 
+/* price下 無料カウンセリングボタン */
+.price-btn {
+  display: none;
+}
+
 /* ==============================
 質問 faq
 ============================== */
@@ -1074,7 +1124,7 @@ footer {
 }
 
 .footer-info {
-  background-color: #00a9ff;
+  background-color: #77D1ff;
 }
 
 .footer-info .section-wrapper {
@@ -1085,7 +1135,7 @@ footer {
 }
 
 .footer-copy-box {
-  background-color: #00a9ff;
+  background-color: #77D1ff;
 }
 
 .footer-copy {
@@ -1117,6 +1167,54 @@ footer {
   font-size: 24px;
   margin-left: 10px;
 }
+
+/* ------------------------------
+ページトップへ戻るボタン
+------------------------------ */
+
+.button_top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  background-color: #99cc65;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;      /* 縦並び */
+  align-items: center;         /* 横中央 */
+  justify-content: center;     /* 縦中央 */
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* 矢印 */
+.button_top::before {
+  content: "⌃";
+  font-size: 26px;
+  margin-bottom: 2px;     /* 矢印とTOPの間隔 */
+  line-height: 1;
+}
+
+/* 表示用 */
+.button_top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
 
 /* ==============================
 レスポンシブ
@@ -1343,6 +1441,23 @@ support
   }
 
   /* ------------------------------
+/* 背景ロゴ設置 */
+/* .bg-logo p { */
+  /* font-size: 25vw; */
+/* } */
+
+/* やはり不要 */
+.bg-logo p {
+    display: none;
+}
+
+.support-btn {
+  display: block;
+  width: 80%;
+  margin-top: 80px;
+}
+
+/* ------------------------------
 卒業生の実績
 ------------------------------ */
 
@@ -1377,6 +1492,16 @@ price
   }
 
   /* ------------------------------
+.price-btn {
+  display: block;
+  width: 80%;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* ------------------------------
 faq 
 -------------------------------*/
 
@@ -1398,4 +1523,11 @@ footer
   .footer-sns-content {
     margin-block: 50px;
   }
+}
+
+/* ページトップボタン削除 */
+.button_top {
+    display: none !important;
+  }
+
 }
