@@ -1,3 +1,12 @@
+// header　ハンバーガーメニュー
+$(function () {
+  $(".hamburger").on("click", function () {
+    $(this).toggleClass("active");
+    $(".header-right").toggleClass("open");
+  });
+});
+
+
 // mainvisual　画像を動かす
 $(function () {
   const images = [
