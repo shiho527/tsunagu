@@ -899,7 +899,7 @@ support
 ============================== */
 
 .faq-section {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .faq-section .section-header {
@@ -1006,12 +1006,81 @@ support
 footer
 ============================== */
 
+footer {
+  color: white;
+  font-size: 14px;
+}
+
 .footer-img-box img {
   object-fit: cover;
   display: block;
   width: 100%;
   height: auto;
 }
+
+.footer-logo-box {
+  width: 180px;
+  height: auto;
+}
+
+.footer-info {
+  background-color: #00a9ff;
+}
+
+.footer-info .section-wrapper {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy-box {
+  background-color: #00a9ff;
+}
+
+.footer-copy {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  border-top: 2px solid white;
+}
+
+.footer-sns-content p {
+  margin-bottom: 10px;
+}
+
+.footer-sns-content a {
+  color: white;
+}
+
+.footer-sns-content ul {
+  display: flex;
+}
+
+.footer-sns-content li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.footer-sns-item i {
+  font-size: 24px; 
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
