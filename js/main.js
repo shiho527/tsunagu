@@ -1,50 +1,113 @@
 // header　ハンバーガーメニュー
-$(function () {
-  $(".hamburger").on("click", function () {
-    $(this).toggleClass("active");
-    $(".header-right").toggleClass("open");
+$(function() {
+  // ハンバーガークリックでメニュー開閉
+  $(".hamburger").on("click", function() {
+    $("body").toggleClass("open"); // CSSの .open に依存
+  });
+
+  // マスククリックでメニュー閉じる
+  $("#mask").on("click", function() {
+    $("body").removeClass("open");
+  });
+
+  // メニューのリンククリックでも閉じる場合
+  $(".nav-menu a").on("click", function() {
+    $("body").removeClass("open");
   });
 });
 
 
-// mainvisual　画像を動かす
+
 $(function () {
-  const images = [
-    { url: "img/mainvisual1.png" },
-    { url: "img/mainvisual2.png" },
-    { url: "img/mainvisual3.png" }
-  ];
+  var $window = $(window);
+  var $hero = $(".hero");
+  var $bg1 = $(".bg1");
+  var $bg2 = $(".bg2");
+  var $content = $(".hero-content");
+  var $film = $(".hero-film");
 
-  let current = 0;
-  const hero = $(".hero");
-  const fadeDiv = $(".fade-bg");
+  var images;
 
-  // 初期表示
-  hero.css({
-    "background-image": `url(${images[current].url})`,
-    "background-position": "left top"
-  });
-
-  function changeBackground() {
-    const next = (current + 1) % images.length;
-
-    fadeDiv
-      .css({
-        "background-image": `url(${images[next].url})`,
-        "background-position": "left top"
-      })
-      .fadeIn(1000, function () {
-        hero.css({
-          "background-image": `url(${images[next].url})`,
-          "background-position": "left top"
-        });
-        fadeDiv.hide();
-        current = next;
-      });
+  // 初期化・画面幅で画像を切り替え
+  function setImages() {
+    if ($(window).width() <= 768) {
+      // スマホ用画像
+      images = [
+        "img/mainvisual1-sp.png",
+        "img/mainvisual2-sp.png",
+        "img/mainvisual3-sp.png",
+      ];
+    } else {
+      // PC用画像
+      images = [
+        "img/mainvisual1.png",
+        "img/mainvisual2.png",
+        "img/mainvisual3.png",
+      ];
+    }
   }
 
-  setInterval(changeBackground, 5000);
+  setImages(); // 初回設定
+
+  var current = 0;
+  var showing = 0; // 0 = bg1, 1 = bg2
+
+  // 初期画像
+  $bg1.css("background-image", `url(${images[0]})`);
+
+  // 背景切替（2枚交互フェード）
+  setInterval(function () {
+    current = (current + 1) % images.length;
+
+    if (showing === 0) {
+      $bg2.css("background-image", `url(${images[current]})`);
+      $bg1.css("opacity", 0);
+      $bg2.css("opacity", 1);
+      showing = 1;
+    } else {
+      $bg1.css("background-image", `url(${images[current]})`);
+      $bg2.css("opacity", 0);
+      $bg1.css("opacity", 1);
+      showing = 0;
+    }
+
+    // 背景切替時にフィルム光を少し動かす
+    $film.css("transform", "translate(30px, 30px)");
+    setTimeout(function () {
+      $film.css("transform", "translate(0, 0)");
+    }, 800);
+  }, 5000);
+
+  // リサイズ時に画像配列を再設定
+  $window.on("resize", function () {
+    setImages();
+    // 必要なら表示中の背景も更新
+    $bg1.css("background-image", `url(${images[current]})`);
+    $bg2.css("background-image", `url(${images[current]})`);
+  });
+
+  // スクロール連動（既存のコードそのまま）
+  $window.on("scroll", function () {
+    var scrollTop = $window.scrollTop();
+    var heroHeight = $hero.outerHeight();
+    var opacity = 1 - scrollTop / heroHeight;
+    if (opacity < 0) opacity = 0;
+
+    $bg1.css("opacity", showing === 0 ? 1 * opacity : 0);
+    $bg2.css("opacity", showing === 1 ? 1 * opacity : 0);
+
+    var translateY = scrollTop * 0.3;
+    $content.css({
+      transform: "translate(-50%, calc(-50% + " + translateY + "px))",
+      opacity: opacity,
+    });
+
+    var filmX = scrollTop * 0.05;
+    var filmY = scrollTop * 0.08;
+    $film.css("transform", `translate(${filmX}px, ${filmY}px)`);
+  });
 });
+
 
 
 // voice 卒業生の声

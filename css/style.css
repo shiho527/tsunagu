@@ -220,10 +220,6 @@ img {
   width: 90%;
 }
 
-/* ================================
-  ハンバーガーメニュー
-================================ */
-
 /* main */
 main {
   padding-top: 80px; /* ヘッダー固定分の余白 */
@@ -231,90 +227,78 @@ main {
 
 /* mainvisual */
 .mainvisual {
-  display: flex;
-  justify-content: flex-end; /* heroを右寄せ */
-  padding-left: 16%;
-  height: calc(100vh - 80px);
+  /* padding-left: 16%; */
+  margin-bottom:100px;
+}
+
+.hero {
   position: relative;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  border-bottom-left-radius: 80px; /* 角を少し丸く */
 }
 
-.main-wrapper {
+/* 背景画像レイヤー */
+.hero-bg {
   position: absolute;
-  top: 35%;
-  left: 5%;
-  z-index: 10;
-  display: flex;
+  inset: 0;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  transition: opacity 1.5s ease;
+  z-index: 1;
+  opacity: 0;
 }
 
-.main-text h2 {
-  font-size: 60px; /* figmaより大きめに */
-  color: #99cc65;
-  line-height: 1.5;
-  margin-bottom: 60px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+.bg1 {
+  opacity: 1; /* 初期表示 */
 }
 
-.main-text h2 span {
-  color: #a3e082;
-  padding-left: 40px;
+/* 光のフィルム */
+.hero-film {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.05) 0%,
+    rgba(255,255,255,0.1) 50%,
+    rgba(255,255,255,0.05) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(0, 0);
+  transition: transform 0.1s linear;
 }
 
-.main-text .btn {
+/* キャッチコピー */
+.hero-content {
+  position: absolute;  /* relative → absolute に変更 */
+  top: 50%;            /* 垂直中央 */
+  left: 50%;           /* 横中央 */
+  transform: translate(-50%, -50%); /* 中心に配置 */
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom:30px;
+}
+
+.hero-content .btn {
   display: inline-block;
   margin-top: 30px;
   padding: 16px 34px;
   font-size: 18px;
 }
 
-.main-text .btn:hover {
-  opacity: 0.8;
-}
-
-.hero {
-  width: 100%;
-  height: calc(100vh - 80px); /* ヘッダー固定分を除く */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  float: right; /* 左側を空けるため右に寄せる */
-  border-bottom-left-radius: 80px; /* 角を少し丸く */
-}
-
-/* フェード用の重ねるdiv */
-.fade-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  display: none;
-  border-bottom-left-radius: 80px; /* 同じ丸みを適用 */
-}
-
-.mainvisual-items img {
-  position: absolute;
-  width: 120px; /* 好きな大きさに調整 */
-  z-index: 10;
-}
-
-/* 個別の位置調整 */
-.rate-1 {
-  top: 40px;
-  left: 250px;
-}
-
-.rate-2 {
-  top: 40px;
-  left: 400px;
-}
-
-.rate-3 {
-  top: 40px;
-  left: 550px;
-}
 
 /* about */
 #about {
@@ -1300,42 +1284,10 @@ footer {
 
   /* main */
   /* mainvisual */
-  .mainvisual {
-    display: flex;
-    justify-content: flex-end; /* heroを右寄せ */
-    padding-left: 0;
-  }
+.hero-bg {
+  background-position: 45% 50%; 
+}
 
-  .main-text h2 {
-    font-size: 60px; /* figmaより大きめに */
-    color: #99cc65;
-    line-height: 1.5;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
-      0 0 10px rgba(255, 255, 255, 0.2);
-  }
-
-  .main-text h2 span {
-    color: #a3e082;
-    padding-left: 40px;
-  }
-
-  .main-text .btn {
-    margin-top: 0;
-  }
-
-  .mainvisual-items img {
-    width: 80px;
-  }
-
-  .hero {
-    background-position: center;
-  }
-
-  /* フェード用の重ねるdiv */
-  .fade-bg {
-    background-position: center;
-  }
 
   /* about */
   .about-inner {
