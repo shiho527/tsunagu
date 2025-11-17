@@ -1201,12 +1201,9 @@ footer {
 @media (max-width: 768px) {
   /* 共通 */
   section {
+    display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  img {
-    width: 100%;
-    height: auto;
   }
 
   /* header */
@@ -1399,6 +1396,29 @@ footer {
   }
 
   /* reason */
+  .reason-title {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .reason-title h3 {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .reason-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .reason-text {
+    width: 100%;
+    text-align: left;
+  }
   .reason-item {
     display: flex;           /* ← flex のままにする */
     flex-direction: column;  /* ← これが効くようになる */
@@ -1410,6 +1430,19 @@ footer {
 
 
   /* study */
+  .study-text,
+  .study-text2 {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .study-item {
+    margin-right: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+
 
   /* flow */
 
