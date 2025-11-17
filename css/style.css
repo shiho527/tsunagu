@@ -1367,6 +1367,15 @@ footer {
 }
 
   /* reason */
+  .reason-item {
+    display: flex;           /* ← flex のままにする */
+    flex-direction: column;  /* ← これが効くようになる */
+  }
+
+  .reason-title {
+    
+  }
+
 
   /* study */
 
