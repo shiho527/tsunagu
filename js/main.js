@@ -10,36 +10,42 @@ $(function () {
 // mainvisual　画像を動かす
 $(function () {
   const images = [
-    "img/mainvisual1.JPG",
-    "img/mainvisual2.jpg",
-    "img/mainvisual3.JPG",
+    { url: "img/mainvisual1.png" },
+    { url: "img/mainvisual2.png" },
+    { url: "img/mainvisual3.png" }
   ];
 
   let current = 0;
   const hero = $(".hero");
   const fadeDiv = $(".fade-bg");
 
-  // 最初の画像をセット
-  hero.css("background-image", `url(${images[current]})`);
+  // 初期表示
+  hero.css({
+    "background-image": `url(${images[current].url})`,
+    "background-position": "left top"
+  });
 
   function changeBackground() {
-    // 次の画像インデックスを取得
     const next = (current + 1) % images.length;
 
-    // フェード用divに次の画像をセットしてフェードイン
     fadeDiv
-      .css("background-image", `url(${images[next]})`)
+      .css({
+        "background-image": `url(${images[next].url})`,
+        "background-position": "left top"
+      })
       .fadeIn(1000, function () {
-        // フェード完了後にheroの背景を切り替え、フェード用divを非表示に
-        hero.css("background-image", `url(${images[next]})`);
+        hero.css({
+          "background-image": `url(${images[next].url})`,
+          "background-position": "left top"
+        });
         fadeDiv.hide();
-        current = next; // 現在の画像インデックスを更新
+        current = next;
       });
   }
 
-  // 5秒ごとに自動で背景切り替え
   setInterval(changeBackground, 5000);
 });
+
 
 // voice 卒業生の声
 
