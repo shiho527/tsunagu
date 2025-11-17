@@ -138,5 +138,10 @@ $(window).on('scroll', function () {
   }
 });
 
+$('.button_top').on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 600); // ← 600msでふわっと戻る
+});
+
 
 });
