@@ -1189,11 +1189,12 @@ footer {
 ============================== */
 @media (max-width: 768px) {
   /* 共通 */
-  section {
-    display: flex;
-    flex-direction: column;
+  .about-btn {
+    display: block;
+    width: 80%;
+    margin-top: 80px;
+    text-align: center;
   }
-
   /* header */
   /*ハンバーガーメニュー*/
   .nav-menu ul {
@@ -1325,12 +1326,6 @@ footer {
   .about-img img {
     width: 100%;
     border-top-right-radius: 80px;
-  }
-
-  .about-btn {
-    display: block;
-    width: 80%;
-    margin-top: 80px;
   }
 
   /* voice */
@@ -1494,8 +1489,36 @@ footer {
   
 
   /* instructors */
+  .instructors-content,
+  .instructors-content2 {
+    flex-direction: column !important;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: double #99cc65;
+  }
 
+  /* 画像を大きく表示（横に広げる） */
+  #instructors img {
+    width: 100% !important;
+  }
 
+  /* テキストを全幅にする */
+  .instructors-content p,
+  .instructors-content2 p {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+  }
+
+  /* 角丸の向き調整（縦並びだと自然にする） */
+  .instructors-item img,
+  .instructors-item3 img,
+  .instructors-item2 img,
+  .instructors-item4 img {
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 0px;
+  }
 
   /* ------------------------------
 support
@@ -1585,6 +1608,7 @@ support
     display: block;
     width: 80%;
     margin-top: 80px;
+    text-align: center;
   }
 
   /* ------------------------------
@@ -1658,4 +1682,5 @@ footer
 /* ページトップボタン削除 */
 .button_top {
   display: none !important;
+}
 }
