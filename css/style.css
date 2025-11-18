@@ -1370,11 +1370,13 @@ footer {
     flex-direction: column;
     width: 100%;
     gap: 20px;
+    border-bottom: 2px dotted #99cc65;
   }
 
   .reason-text {
     width: 100%;
     text-align: left;
+    margin-bottom: 20px;
   }
   .reason-item {
     display: flex;           /* ← flex のままにする */
@@ -1396,18 +1398,76 @@ footer {
 
   .study-item {
     margin-right: 0;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 20px;
+    }
 
   .study-img {
     display: block;
   }
 
-  /* flow */
-  .flow-container {
-    display: block;
+  .study-characters img {
+    display: none;
   }
+
+  /* flow */
+  /* flow セクションだけ flex を解除 */
+  #flow {
+      display: block !important;
+  }
+
+  .flow-container{
+    display: block;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* slick が width を自動計算するので width は書かない */
+  .flow-item,
+  .flow-item2,
+  .flow-item3,
+  .flow-item4,
+  .flow-item5{
+    padding:20px;
+    box-sizing:border-box;
+  }
+
+  /* 画像を画面に収める */
+  #flow img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  /* slick-slide に横並びするための基本設定 */
+  .slick-slide{
+    box-sizing:border-box;
+  }
+
+  /* ドットの余白が大きくなり過ぎる問題を防ぐ */
+  .slick-dots{
+    bottom: -10px;
+  }
+
+  /* 矢印ボタン */
+  .flow-prev, .flow-next{
+    background:#99cc65;
+    color:#fff;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:40%;
+    z-index:999;
+    cursor:pointer;
+  }
+  .flow-prev{ left:-12px; }
+  .flow-next{ right:-12px; }
 
   /* instructors */
 

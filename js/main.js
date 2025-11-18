@@ -214,3 +214,36 @@ $('.button_top').on('click', function(e) {
 
 
 });
+
+// 受講の流れ レスポンシブ対応
+$(document).ready(function () {
+
+  function initFlowSlider() {
+
+    if (window.innerWidth <= 768) {
+
+      if (!$('.flow-container').hasClass('slick-initialized')) {
+
+        $('.flow-container').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+          infinite: false,
+          adaptiveHeight: true,
+          prevArrow: '<button class="flow-prev slick-arrow">＜</button>',
+          nextArrow: '<button class="flow-next slick-arrow">＞</button>',
+        });
+      }
+
+    } else {
+
+      if ($('.flow-container').hasClass('slick-initialized')) {
+        $('.flow-container').slick('unslick');
+      }
+    }
+  }
+
+  initFlowSlider();
+  $(window).on('resize', initFlowSlider);
+});
