@@ -549,7 +549,7 @@ main {
   padding: 5px;
 }
 
-.item-title {
+#flow .item-title {
   padding-bottom: 5px;
 }
 
@@ -863,7 +863,7 @@ section,
 料金 price
 ============================== */
 
-.price-head {
+.price-header {
   margin-block: 60px;
 }
 
@@ -1192,7 +1192,6 @@ footer {
   section {
     display: flex;
     flex-direction: column;
-    text-align: center;
   }
 
   /* header */
@@ -1218,6 +1217,14 @@ footer {
     transition: 0.5s;
     z-index: 20;
     overflow-y: auto;
+    /* 受講生の部分のボタン動かすためのコード
+    非表示の際はボタンをクリックできるようにする */
+    pointer-events: none;
+  }
+
+  /* ◎ 開いた時だけクリックできるように戻す */
+  .open .header-right {
+    pointer-events: auto;
   }
 
   .open .header-right {
@@ -1411,6 +1418,13 @@ footer {
     display: none;
   }
 
+  .study-phones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   /* flow */
   /* flow セクションだけ flex を解除 */
   #flow {
@@ -1432,6 +1446,15 @@ footer {
   .flow-item5{
     padding:20px;
     box-sizing:border-box;
+  }
+
+  #flow .item-title {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  #flow p {
+    text-align: left;
   }
 
   /* 画像を画面に収める */
@@ -1466,10 +1489,13 @@ footer {
     z-index:999;
     cursor:pointer;
   }
-  .flow-prev{ left:-12px; }
-  .flow-next{ right:-12px; }
+  .flow-prev{ left:10px; }
+  .flow-next{ right:10px; }
+  
 
   /* instructors */
+
+
 
   /* ------------------------------
 support
