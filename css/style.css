@@ -84,14 +84,13 @@ img {
 }
 
 /* ================================
-  無料カウンセリングボタン
+  無料カウンセリングボタン（微光）
 ================================ */
 .btn-gradient {
   position: relative;
   display: inline-block;
   padding: 12px 28px;
   border-radius: 30px;
-  /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
   background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
   color: #fff;
   font-weight: 500;
@@ -99,50 +98,48 @@ img {
   font-size: 14px;
   overflow: hidden;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
 }
 
-/* 光の筋（キラッと動く） */
+/* ✨控えめな光の筋 */
 .btn-gradient::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 60%;
+  left: -130%;
+  width: 40%;  /* ←細くして控えめに */
   height: 100%;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.25) 50%, /* ←光を弱めに */
     rgba(255, 255, 255, 0) 100%
   );
-  transform: skewX(-20deg);
-}
+  transform: skewX(-25deg);
 
-/* hoverで光る */
-.btn-gradient:hover::before {
-  animation: shine 0.9s forwards;
+  /* ゆったり流れる微光 */
+  animation: shine-soft 4.8s infinite ease-in-out;
 }
 
 .btn-gradient:hover {
   opacity: 0.95;
 }
 
-/* クリックしたとき（押し込み感） */
 .btn-gradient:active {
   transform: translateY(2px);
   box-shadow: 0 2px 5px rgba(0, 153, 204, 0.3);
 }
 
-/* 光のアニメーション */
-@keyframes shine {
+/* ゆっくり控えめな動き */
+@keyframes shine-soft {
   0% {
-    left: -100%;
+    left: -130%;
   }
   100% {
     left: 150%;
   }
 }
+
 
 /* header */
 #header {
@@ -285,11 +282,19 @@ main {
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  text-shadow:
+    /* 0 0 5px rgba(255,255,255,0.3),    */
+    0 0 10px rgba(255,255,255,0.3),  
+    0 0 20px rgba(255,255,255,0.2); 
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom:30px;
+  text-shadow:
+    /* 0 0 5px rgba(255,255,255,0.3),    */
+    0 0 10px rgba(255,255,255,0.3),  
+    0 0 20px rgba(255,255,255,0.2);  
 }
 
 .hero-content .btn {
