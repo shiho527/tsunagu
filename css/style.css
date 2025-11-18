@@ -1376,8 +1376,9 @@ footer {
     flex-direction: column;  /* ← これが効くようになる */
   }
 
-  .reason-title {
-    
+  #reason img {
+    display: block;
+    margin: 0 auto;
   }
 
 
@@ -1394,9 +1395,14 @@ footer {
     border-bottom-right-radius: 0px;
   }
 
-
+  .study-img {
+    display: block;
+  }
 
   /* flow */
+  .flow-container {
+    display: block;
+  }
 
   /* instructors */
 
