@@ -1,162 +1,149 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <title>pronavi</title>
-    <meta
-      name="description"
-      content="テキストテキストテキストテキストテキストテキスト"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="img/favicon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <!-- ⇩試し 質問の吹き出し出すための設定-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<head>
+  <meta charset="utf-8" />
+  <title>pronavi</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキスト" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- ⇩試し 質問の吹き出し出すための設定-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- slick -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-  </head>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
 
-  <body>
-    <header id="header">
+<body>
+  <header id="header">
+    <div class="section-wrapper">
+      <!-- 左：ロゴ -->
+      <h1 class="header-logo">
+        <a href="#">
+          <img src="img/logo.png" alt="header-logo" />
+        </a>
+      </h1>
+
+      <!-- 右：ナビ＋ボタンをまとめる -->
+      <div class="header-right">
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#about">
+                <span class="material-symbols-outlined">computer</span>
+                プロナビとは
+              </a>
+            </li>
+            <li>
+              <a href="#reason">
+                <span class="material-symbols-outlined">check_circle</span>
+                選ばれる理由
+              </a>
+            </li>
+            <li>
+              <a href="#support">
+                <span class="material-symbols-outlined">school</span>
+                学習サポート
+              </a>
+            </li>
+            <li>
+              <a href="#price">
+                <span class="material-symbols-outlined">event_note</span>
+                受講プラン
+              </a>
+            </li>
+            <li>
+              <a href="#faq">
+                <span class="material-symbols-outlined">chat_bubble</span>
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn btn-gradient">
+          <span>無料カウンセリングを予約する</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
+  </header>
+
+  <main>
+    <section class="mainvisual">
+      <div class="hero">
+        <div class="fade-bg"></div>
+
+        <!-- 背景レイヤー2枚 -->
+        <div class="hero-bg bg1"></div>
+        <div class="hero-bg bg2"></div>
+
+        <!-- 光のフィルムレイヤー -->
+        <div class="hero-film"></div>
+
+        <!-- キャッチコピー -->
+        <div class="hero-content">
+          <h1>小さな一歩が<br>未来を変える</h1>
+          <p>プログラミングで、理想の働き方を叶えよう</p>
+          <a href="#" class="btn btn-gradient">無料カウンセリングを予約する</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="about">
       <div class="section-wrapper">
-        <!-- 左：ロゴ -->
-        <h1 class="header-logo">
-          <a href="#">
-            <img src="img/logo.png" alt="header-logo" />
-          </a>
-        </h1>
-
-        <!-- 右：ナビ＋ボタンをまとめる -->
-        <div class="header-right">
-          <nav class="nav-menu">
-            <ul>
-              <li>
-                <a href="#about">
-                  <span class="material-symbols-outlined">computer</span>
-                  プロナビとは
-                </a>
-              </li>
-              <li>
-                <a href="#reason">
-                  <span class="material-symbols-outlined">check_circle</span>
-                  選ばれる理由
-                </a>
-              </li>
-              <li>
-                <a href="#support">
-                  <span class="material-symbols-outlined">school</span>
-                  学習サポート
-                </a>
-              </li>
-              <li>
-                <a href="#price">
-                  <span class="material-symbols-outlined">event_note</span>
-                  受講プラン
-                </a>
-              </li>
-              <li>
-                <a href="#faq">
-                  <span class="material-symbols-outlined">chat_bubble</span>
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <a href="#" class="btn btn-gradient">
-            <span>無料カウンセリングを予約する</span>
-          </a>
+        <div class="about-inner">
+          <div class="about-text">
+            <div class="section-header">
+              <p class="section-subtitle">About</p>
+              <h2 class="section-title">Pro Naviとは</h2>
+            </div>
+            <p class="about-lead">
+              ProNaviは、在宅ワークを叶えたい方のための6ヶ月集中プログラミングスクール。
+            </p>
+            <p>
+              あなたのレベルに合わせた専用プランで、自宅学習を徹底サポート。<br />
+              オンライン完結のマンツーマン指導だから、どこでも学びやすい。<br />
+              現役エンジニア講師が伴走してサポートするので、未経験の方でも安心。<br />
+              半年後、「できるようになった自分」に出会えます。
+            </p>
+          </div>
+          <div class="about-img">
+            <img src="img/about.jpg" alt="学習風景" />
+          </div>
         </div>
       </div>
 
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <a href="#" class="about-btn btn-gradient section-wrapper">
+        <span>無料カウンセリングを予約する</span>
+      </a>
+    </section>
 
-      <div id="mask"></div>
-    </header>
-
-    <main>
-      <section class="mainvisual">
-            <div class="hero">
-              <div class="fade-bg"></div>
-
-      <!-- 背景レイヤー2枚 -->
-      <div class="hero-bg bg1"></div>
-      <div class="hero-bg bg2"></div>
-
-      <!-- 光のフィルムレイヤー -->
-      <div class="hero-film"></div>
-
-      <!-- キャッチコピー -->
-      <div class="hero-content">
-        <h1>小さな一歩が<br>未来を変える</h1>
-        <p>プログラミングで、理想の働き方を叶えよう</p>
-        <a href="#" class="btn btn-gradient"
-              >無料カウンセリングを予約する</a
-            >
-      </div>
-    </div>
-      </section>
-
-      
-        <section id="about" class="about">
-          <div class="section-wrapper">
-            <div class="about-inner">
-              <div class="about-text">
-                <div class="section-header">
-                  <p class="section-subtitle">About</p>
-                  <h2 class="section-title">Pro Naviとは</h2>
-                </div>
-                <p class="about-lead">
-                  ProNaviは、在宅ワークを叶えたい方のための6ヶ月集中プログラミングスクール。
-                </p>
-                <p>
-                  あなたのレベルに合わせた専用プランで、自宅学習を徹底サポート。<br />
-                  オンライン完結のマンツーマン指導だから、どこでも学びやすい。<br />
-                  現役エンジニア講師が伴走してサポートするので、未経験の方でも安心。<br />
-                  半年後、「できるようになった自分」に出会えます。
-                </p>
-              </div>
-              <div class="about-img">
-                <img src="img/about.jpg" alt="学習風景" />
-              </div>
-            </div>
-          </div>
-
-          <a href="#" class="about-btn btn-gradient section-wrapper">
-            <span>無料カウンセリングを予約する</span>
-          </a>
-        </section>
-
-      <section id="voice" class="voice">
-        <div class="section-wrapper">
-          <div class="section-header">
-            <p class="right-section-subtitle">Graduate Voices</p>
-            <h2 class="right-section-title">卒業生の声</h2>    
-          </div>      
+    <section id="voice" class="voice">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <p class="right-section-subtitle">Graduate Voices</p>
+          <h2 class="right-section-title">卒業生の声</h2>
+        </div>
 
         <div class="voice-list">
           <div class="voice-item">
@@ -207,573 +194,578 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- 選ばれる理由 -->
-      <section class="reason" id="reason">
-        <div class="section-wrapper">
-            <div class="section-heaser">
-            <p class="section-subtitle">Why Choose Us?</p>
+    <!-- 選ばれる理由 -->
+    <section class="reason" id="reason">
+      <div class="section-wrapper">
+        <div class="section-heaser">
+          <p class="section-subtitle">Why Choose Us?</p>
           <h2 class="section-title">プロナビが選ばれる3つの理由</h2>
-          </div>
-          <div class="reason-list">
-            <div class="reason-item">
-              <div class="reason-title">
-                REASON 1
-                <h3 class="reason-heading">
-                  一人ひとりに最適化されたカリキュラムで、確かなスキルを身につける。
-                </h3>
-              </div>
-              <div class="reason-content">
-                <img src="img/reason1.jpg" />
-                <div class="reason-text">
-                  <p>専属コンサルタントは、現役のプロエンジニア。</p>
-                  <p>
-                    学習目標の設定から、最適な学習プランの提案、日々のモチベーションサポートまで、あなたの成長に本気で寄り添います。
-                  </p>
-                  <p>
-                    性格診断をもとに、あなたに最も合うコンサルタントが担当します。
-                  </p>
-                </div>
-              </div>
+        </div>
+        <div class="reason-list">
+          <div class="reason-item">
+            <div class="reason-title">
+              REASON 1
+              <h3 class="reason-heading">
+                一人ひとりに最適化されたカリキュラムで、確かなスキルを身につける。
+              </h3>
             </div>
-          </div>
-          <div class="reason-list">
-            <div class="reason-item">
-              <div class="reason-title">
-                REASON 2
-                <h3 class="reason-heading">
-                  あなたのレベルに合わせた最適な学習プランを、プロのコーチが提案。
-                </h3>
-              </div>
-              <div class="reason-content">
-                <img src="img/reason2.jpg" />
-                <div class="reason-text">
-                  <p>
-                    効率的にスキルを伸ばすために、毎週の課題と学習進捗を一緒に管理します。
-                  </p>
-                  <p>わからないことは、公式LINEから24時間いつでも質問OK。</p>
-                  <p>
-                    つまずきをその場で解決しながら、安心して学びを進められます。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="reason-list">
-            <div class="reason-item">
-              <div class="reason-title">
-                REASON 3
-                <h3 class="reason-heading">
-                  案件獲得までを徹底サポート。自走できる力を身につける。
-                </h3>
-              </div>
-              <div class="reason-content">
-                <img src="img/reason3.jpg" />
-                <div class="reason-text">
-                  <p>
-                    学習後は、実際に案件を獲得するための実践的なサポートを行います。
-                  </p>
-                  <p>
-                    プロの営業担当が商談に同行し、リアルな営業の流れを体感。実際に受注した案件に関するフォローも行うため、安心して一歩を踏み出せます。
-                  </p>
-                </div>
+            <div class="reason-content">
+              <img src="img/reason1.jpg" />
+              <div class="reason-text">
+                <p>専属コンサルタントは、現役のプロエンジニア。</p>
+                <p>
+                  学習目標の設定から、最適な学習プランの提案、日々のモチベーションサポートまで、あなたの成長に本気で寄り添います。
+                </p>
+                <p>
+                  性格診断をもとに、あなたに最も合うコンサルタントが担当します。
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      
-      <a href="#" class="about-btn btn-gradient section-wrapper">
-        <span>無料カウンセリングを予約する</span>
-      </a>
-
-      <!-- スマホの画像があるところ -->
-      <section class="study" id="study">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#fffaed" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-        <div class="section-wrapper">
-          <div class="study-title">
-            <p class="study-subtitle">プログラミングスキルの習得には</p>
-            <h2 class="study-main-title">学習生産性✖️学習時間</h2>
-            <p>の最大化が不可欠</p>
-          </div>
-        </div>
-        <div class="study-item">
-          <div class="study-text">
-            <p>あなたの課題を分析し、最も効果的な学習を提案します。<br>
-              プログラミングを効率よく身につけるには、“目的を意識して学ぶ”ことが大切です。<br>
-              ProNaviでは、あなたの現在のスキルや目標を丁寧に分析し、無駄のない学習プランで成長を最短化します。</p>              <p>続けられる環境が、確実な成長を生み出す。<br>
-              学習の継続こそが、スキルアップの最大のカギ。<br>
-              ProNaviでは、あなたの生活リズムに合わせたスケジュール設計と、コーチからの毎日のメッセージサポートで、学習を習慣化します。</p>
-          </div>
-          <div class="study-text2">
-            <p>（質疑応答の例）</p>
-            <p>24時間LINEにて気軽に質問が出来ます。<br>
-              わからない所があってもすぐに解決することでしっかりと学習内容が身につきます。</p>
-          </div>
-        </div>
-        <div class="section-wrapper">
-          <div class="study-img">
-            <div class="study-characters">
-              <img src="img/study1.svg">
+        <div class="reason-list">
+          <div class="reason-item">
+            <div class="reason-title">
+              REASON 2
+              <h3 class="reason-heading">
+                あなたのレベルに合わせた最適な学習プランを、プロのコーチが提案。
+              </h3>
             </div>
-            <div class="study-phones">
-              <img src="img/line1.jpg">
-              <img src="img/line2.jpg">
-              <img src="img/line3.jpg">
-            </div>
-          </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#fffaed" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,106.7C384,107,480,117,576,112C672,107,768,85,864,96C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-        </svg>
-      </section>
-
-      <!-- 受講の流れ -->
-      <section class="flow" id="flow">
-        <div class="section-wrapper">
-          <div class="section-header">
-            <p class="section-subtitle">Flow</p>
-            <h2 class="section-title">受講の流れ</h2>
-          </div>
-          <div class="flow-container">
-            <div class="flow-item">
-              <h5 class="item-title">Step1 スタートミーティング</h5>
-              <img src="img/flow1.jpg">
-              <p>スキル診断と学習方針の決定後、あなた専属のコーチが担当に就きます。<br>
-                現在のレベルをもとに、最適な指導ができるコーチをマッチング。<br>
-                あなたの学習を最初から最後までサポートします。</p>
-            </div>
-            <div class="flow-item2">
-              <h5 class="item-title">Step2 毎日の学習</h5>
-              <img src="img/flow2.jpg">
-              <p>プログラミングスキルの向上には、日々の積み重ねが欠かせません。<br>
-                専属コーチとのLINE連携により、疑問をその場で解消しながら、効率的に学習を進めていただけます。</p>
-            </div>
-            <div class="flow-item3">
-              <h5 class="item-title">Step3 週１回の授業</h5>
-              <img src="img/flow3.jpg">
-              <p>週1回の専属コーチ授業で、成長の進捗と課題を確認。<br>
-                学習内容の理解度をチェックし、つまずいた部分は丁寧に解説。<br>
-                次回までに取り組む課題を明確にし、着実なステップアップをサポートします。</p>
-            </div>
-            <div class="flow-item4">
-              <h5 class="item-title">Step4 学習の継続のサポート</h5>
-              <img src="img/flow4.jpg">
-              <p>日々の学習と授業を重ねながら、スキルを定着させていきます。<br>
-                習慣として学びが身についたタイミングで、次のステップである案件獲得フェーズへ進みます。</p>
-            </div>
-            <div class="flow-item5">
-              <h5 class="item-title">Step5 案件獲得も徹底サポート</h5>
-              <img src="img/flow5.jpg">
-              <p>スキル習得後は、実際に案件獲得に向けて行動を開始します。<br>
-                プロの営業担当が営業の同行や代行を行い、あなたの初案件獲得をしっかりとサポートします。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 講師紹介 -->
-      <section class="instructors" id="instructors">
-        <div class="section-wrapper">
-          <div class="section-header">
-            <p class="right-section-subtitle">instructors</p>
-            <h2 class="right-section-title">講師紹介</h2>
-          </div>
-          <div class="instructors-container">
-            <div class="instructors-item">
-              <div class="instructors-content">
-                <p>トップ講師 加藤 夕騎<br>
-                  お客様1人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。<br>
-                  プロナビは複数の最適化されたプログラミング学習トレーニングの中から、お客さま一人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。<br>
-                  それぞれのトレーニングを構築する際は、学術的な調査はもちろんのこと、学習の中で本当に効果があるのかをコンサルタント・お客さまなど様々な視点から十分な時間をかけて検証した上で展開しています。<br>
-                  四半期に一度、カリキュラムを全社的にアップデートするイベントを設けており、トレーニングやカリキュラムを常に進化させ続けています。</p> 
-                  <img src="img/teacher.jpg">
-              </div>
-            </div>
-            <div class="instructors-item2">
-              <div class="instructors-content2">
-                <p>現役エンジニア講師 TESTU<br>
-                  その人にとって継続可能かつ、 着実にスキルをつけられるような学習方法を 一緒に探し続けます。<br>
-                  プログラミング学習は筋トレに似ていると思います。<br>
-                  人それぞれ体格も違えば、やるべき事も変わってくる。<br>
-                  間違ったやり方で筋トレをし続けても結果には繋がりにくい。正しいやり方と継続がとても重要です。<br>
-                  その人にとって継続可能かつ、しっかり最適な負荷をかけ続ける学習方法を一緒に探し続けます！</p>
-                  <img src="img/teacher1.jpg">
-              </div>
-            </div>
-            <div class="instructors-item3">
-              <div class="instructors-content">
-                <p>現役エンジニア講師 YURIKO<br>
-                  プログラミングスキルを習得するには 環境×覚悟が必要だと思っています。<br>
-                  世の中には数多くの学習教材や学習方法が溢れていますが、プロナビはあなたの目標を最短で達成するためにはどの手段を取ることが正しいのか、忙しいあなたでも学習が継続できるような仕組みや環境を提供します。<br>
-                  「スキルを伸ばす」その覚悟を持っていただければ、私たちコンサルタント一同、全力で、最短でプログラミングスキルを伸ばすサポートをさせていただきます！</p>
-                  <img src="img/teacher2.jpg">
-              </div>
-            </div>
-            <div class="instructors-item4">
-              <div class="instructors-content2">
-                <p>現役エンジニア講師 AOKI<br>
-                  卒業後も自分の力で成長していけるような 学習スキルも同時に身につけて欲しい<br>
-                  プログラミングは多くの言語があり、使われる言語の変化も早いです。<br>
-                  そのため、実際に仕事をするときに新しい知識が必要になってくることもあるため、ただ覚えるだけではなく、自分の力で学習を進めていく能力も半年間を通して身につけていただきたいと思っています。</p>
-                  <img src="img/teacher3.jpg">
+            <div class="reason-content">
+              <img src="img/reason2.jpg" />
+              <div class="reason-text">
+                <p>
+                  効率的にスキルを伸ばすために、毎週の課題と学習進捗を一緒に管理します。
+                </p>
+                <p>わからないことは、公式LINEから24時間いつでも質問OK。</p>
+                <p>
+                  つまずきをその場で解決しながら、安心して学びを進められます。
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      
-      <a href="#" class="about-btn btn-gradient section-wrapper">
-        <span>無料カウンセリングを予約する</span>
-      </a>
-
-            <!-- our support -->
-      <section id="support">
-        <div class="bg-logo">
-            <p>Pro Navi</p>
-        </div>
-
-        <div class="support-head-bg">
-          <img src="img/support_bg.svg">
-        </div>
-        <div class="support">
-          <div class="section-wrapper">
-            <div class="support-title-box">
-              <p class="support-title">our support</p>
-              <p class="support-text">学習をスムーズに進めるための「効率的な学習環境」
-                <br>プロナビでは、テクノロジーと伴走サポートで
-                <br>あなたの「学習効率」と「時間の価値」を最大化します
-              </p>
+        <div class="reason-list">
+          <div class="reason-item">
+            <div class="reason-title">
+              REASON 3
+              <h3 class="reason-heading">
+                案件獲得までを徹底サポート。自走できる力を身につける。
+              </h3>
             </div>
-
-            <ul class="support-contents">
-              <li>
-                <div class="support-subtitle">
-                  <p class="support-subtitle-left">POINT1</p>
-                  <p class="support-subtitle-right">学習スケジュールを毎週管理</p>
-                </div>
-
-                <div class="support-content">
-                  <div class="support-content-left">
-                    <p>毎週の目標を立て、担当コーチと進捗を共有。</p>
-                    <p>1週間ごとに振り返りとフィードバックで、成長を実感できます</p>
-
-                    <button class="btn detail-btn">詳しく見る</button>
-                    
-                    <div class="detail-text">
-                      <p>授業ごとに1週間の学習スケジュールを作成し、公式LINEで日々の進捗を共有します。</p>
-                      <p>専属コンサルタントが学習の課題を分析し、次週の改善に繋げます。</p>
-                    </div>
-                  </div>
-
-                  <div class="support-content-right">
-                    <img src="img/point1.png">
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="support-subtitle">
-                  <p class="support-subtitle-left">POINT2</p>
-                  <p class="support-subtitle-right">公式LINEで24時間質問可能</p>
-                </div>
-
-                <div class="support-content">
-                  <div class="support-content-left">
-                    <p>「わからない」をすぐに解決。</p>
-                    <p>いつでもコーチに質問できるから、つまずかずに学習が続く。</p>
-
-                    <button class="btn detail-btn">詳しく見る</button>
-
-                    <div class="detail-text">
-                      <p>担当コーチが24時間公式LINEで質問対応。</p>
-                      <p>理解できない箇所をその場で解消し、効率的にステップアップできる環境を整えています。</p>
-                    </div>
-                  </div>
-
-                  <div class="support-content-right">
-                    <img src="img/point2.png">
-                  </div>
-                </div>
-              </li>
-            
-              <li>
-                <div class="support-subtitle">
-                  <p class="support-subtitle-left">POINT3</p>
-                  <p class="support-subtitle-right">案件獲得のサポートも充実</p>
-                </div>
-
-                <div class="support-content">
-                  <div class="support-content-left">
-                    <p>学習後も安心。</p>
-                    <p>プロの営業マンがあなたの初案件獲得まで伴走します。</p>
-
-                    <button class="btn detail-btn">詳しく見る</button>
-
-                    <div class="detail-text">
-                      <p>学習後の営業同行や実践的なアドバイスで、初めての案件獲得を徹底支援。</p>
-                      <p>営業相談や質問も、公式LINEからいつでも可能です。</p>
-                    </div>
-                  </div>
-
-                  <div class="support-content-right">
-                    <img src="img/point3.png">
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="support-subtitle">
-                  <p class="support-subtitle-left">POINT4</p>
-                  <p class="support-subtitle-right">助け合える環境</p>
-                </div>
-
-                <div class="support-content">
-                  <div class="support-content-left">
-                    <p>プロナビには、アバターで参加できるオンライン作業会「メタリーフ」があります。</p>
-                    
-                    <button class="btn detail-btn">詳しく見る</button>
-
-                    <div class="detail-text">
-                      <p>同じフェーズの仲間や、すでに案件獲得している先輩とも気軽に交流できます。</p>
-                      <p>質問したり励まし合ったりしながら、1人では続けにくい学習も前向きに取り組めます。</p>
-                      <p>さらにオフライン交流会も定期的に開催され、講師や仲間と直接つながる機会も豊富。</p>
-                      <p>学習継続のモチベーションを高める、安心して参加できるコミュニティです。</p>
-                    </div>
-                  </div>
-
-                  <div class="support-content-right">
-                    <img src="img/point4.png">
-                  </div>  
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- wrapper 閉じ -->
-
-          <div class="support-slider">
-            <div class="img-wrap">
-              <div class="img-bg"></div>
-              <img src="img/support1.png">
-            </div>
-            <div class="img-wrap">
-              <div class="img-bg"></div>
-              <img src="img/support2.png">
-            </div>
-            <div class="img-wrap">
-              <div class="img-bg"></div>
-              <img src="img/support3.png">
-            </div>
-            <div class="img-wrap">
-              <div class="img-bg"></div>
-              <img src="img/support4.png">
-            </div>
-            <div class="img-wrap">
-              <div class="img-bg"></div>
-              <img src="img/support5.png">
-            </div>
-          </div>
-        
-          <a href="#" class="support-btn btn-gradient section-wrapper">
-            <span>無料カウンセリングを予約する</span>
-          </a>
-
-          <!-- 卒業生の実績 -->
-          <div class="graduate-achievements">
-            <div class="section-wrapper">
-              <div class="section-header">
-                <p class="section-subtitle">Graduate Achievements</p>
-                <h2 class="section-title">卒業生の実績</h2>
-              </div>
-            
-              <div class="graduate-achievements-slider section-wrapper">
-                <div><img src="img/achievement1.png"></div>
-                <div><img src="img/achievement2.png"></div>
-                <div><img src="img/achievement3.png"></div>
-                <div><img src="img/achievement4.png"></div>
-                <div><img src="img/achievement5.png"></div>
-                <div><img src="img/achievement6.png"></div>
+            <div class="reason-content">
+              <img src="img/reason3.jpg" />
+              <div class="reason-text">
+                <p>
+                  学習後は、実際に案件を獲得するための実践的なサポートを行います。
+                </p>
+                <p>
+                  プロの営業担当が商談に同行し、リアルな営業の流れを体感。実際に受注した案件に関するフォローも行うため、安心して一歩を踏み出せます。
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- 料金 -->
-      <section class="price" id="price">
-        <div class="price-header section-wrapper">
-          <p class="right-section-subtitle">Pricing</p>
-          <h2 class="right-section-title">料金</h2> 
-        </div>
-
-        <div class="price-container">
-          <div class="price-contents section-wrapper">
-            <h3 class="price-title">６ヶ月間集中プログラム</h3>
-            <ul class="price-content">
-                <li>24時間質問対応</li>
-                <li>あなただけの学習スケジュールを作成</li>
-                <li>定期的な講義で苦手を克服</li>
-                <li>学習スケジュール作成と習慣化のサポート</li>
-            </ul>
-            <div class="price-detail">
-              <p class="price-detail-left">総額</p>
-              <span>550,000円</span>
-              <p class="price-detail-right">（税込）</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <a href="#" class="price-btn btn-gradient section-wrapper">
-        <span>無料カウンセリングを予約する</span>
-      </a>
-
-      <!-- 質問 -->
-      <section class="faq-section section-wrapper" id="faq">
-        <div class="section-header">
-          <p class="section-subtitle">FAQ</p>
-          <h2 class="section-title">質問</h2>
-        </div>
-
-        <div class="faq-contents">
-          <div class="faq">
-            <h3 class="faq-title">
-              Q1<br>従来のプログラミングスクールとは何が違いますか？
-            </h3>
-            <p class="faq-text">
-              プログラミングスクールの多くは「コードを知る」ことに主眼をおいていますが、
-              プロナビでは模写コーディングを含む複数のトレーニングを組み合わせてお客様ごとの最適カリキュラムをご提案します。
-              また、日々の学習を支援する多彩なサポートを用意しています。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          
-          <div class="faq">
-            <h3 class="faq-title">
-              Q2<br>どんな教材を使用しますか？
-            </h3>
-            <p class="faq-text">
-              当社が厳選した市販教材とオリジナル教材の中から、お客様にとって最適な組み合わせをご提案します。
-              どのような教材を用いるかは無料カウンセリングにてお問い合わせください。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">
-              Q3<br>専属コンサルタントは変えられますか？
-            </h3>
-            <p class="faq-text">
-              可能です。ご希望の場合は、公式事務局LINEまでお問い合わせください。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">
-              Q4<br>パソコンは必要ですか？
-            </h3>
-            <p class="faq-text">
-              プログラミングの学習ではパソコンは必須になります。貸し出しなどは行っていないため、ご用意必要になります。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">
-              Q5<br>学習時間が確保できるか不安ですが、大丈夫ですか？
-            </h3>
-            <p class="faq-text">
-              ご安心ください。多くの方が最初は不安を感じていますが、専属コンサルタントのタイムマネジメントやモチベーション管理などのきめ細かいサポートで、実際に激務の中で働いている方もプログラミングスキルを向上されています。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">
-              Q6<br>校舎に通うのが難しいのですが、大丈夫ですか？
-            </h3>
-            <p class="faq-text">
-              基本的にオンライン受講となっています。対面受講の場合と同等のプログラミングスキル上達の実績を上げております。
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <a href="#" class="button_top">TOP</a>
-
-    <footer>
-      <div class="footer-img-box">
-        <img src="img/footer4.svg">
       </div>
-      
-      <div class="footer-info">
-        <div class="section-wrapper">
-          <div class="footer-logo-box">
-            <img src="img/footer_logo2.png">
+    </section>
+
+    <a href="#" class="about-btn btn-gradient section-wrapper">
+      <span>無料カウンセリングを予約する</span>
+    </a>
+
+    <!-- スマホの画像があるところ -->
+    <section class="study" id="study">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fffaed" fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
+      <div class="section-wrapper">
+        <div class="study-title">
+          <p class="study-subtitle">プログラミングスキルの習得には</p>
+          <h2 class="study-main-title">学習生産性✖️学習時間</h2>
+          <p>の最大化が不可欠</p>
+        </div>
+      </div>
+      <div class="study-item">
+        <div class="study-text">
+          <p>あなたの課題を分析し、最も効果的な学習を提案します。<br>
+            プログラミングを効率よく身につけるには、“目的を意識して学ぶ”ことが大切です。<br>
+            ProNaviでは、あなたの現在のスキルや目標を丁寧に分析し、無駄のない学習プランで成長を最短化します。</p>
+          <p>続けられる環境が、確実な成長を生み出す。<br>
+            学習の継続こそが、スキルアップの最大のカギ。<br>
+            ProNaviでは、あなたの生活リズムに合わせたスケジュール設計と、コーチからのメッセージサポートで、学習を習慣化します。</p>
+        </div>
+        <div class="study-text2">
+          <p>（質疑応答の例）</p>
+          <p>24時間LINEにて気軽に質問が出来ます。<br>
+            わからない所があってもすぐに解決することでしっかりと学習内容が身につきます。</p>
+        </div>
+      </div>
+      <div class="section-wrapper">
+        <div class="study-img">
+          <div class="study-characters">
+            <img src="img/study1.svg">
           </div>
-          
-          <p class="footer-address">
+          <div class="study-phones">
+            <img src="img/line1.jpg">
+            <img src="img/line2.jpg">
+            <img src="img/line3.jpg">
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fffaed" fill-opacity="1"
+          d="M0,128L48,122.7C96,117,192,107,288,106.7C384,107,480,117,576,112C672,107,768,85,864,96C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+    </section>
+
+    <!-- 受講の流れ -->
+    <section class="flow" id="flow">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <p class="section-subtitle">Flow</p>
+          <h2 class="section-title">受講の流れ</h2>
+        </div>
+        <div class="flow-container">
+          <div class="flow-item">
+            <h5 class="item-title">Step1 スタートミーティング</h5>
+            <img src="img/flow1.jpg">
+            <p>スキル診断と学習方針の決定後、あなた専属のコーチが担当に就きます。<br>
+              現在のレベルをもとに、最適な指導ができるコーチをマッチング。<br>
+              あなたの学習を最初から最後までサポートします。</p>
+          </div>
+          <div class="flow-item2">
+            <h5 class="item-title">Step2 毎日の学習</h5>
+            <img src="img/flow2.jpg">
+            <p>プログラミングスキルの向上には、日々の積み重ねが欠かせません。<br>
+              専属コーチとのLINE連携により、疑問をその場で解消しながら、効率的に学習を進めていただけます。</p>
+          </div>
+          <div class="flow-item3">
+            <h5 class="item-title">Step3 週１回の授業</h5>
+            <img src="img/flow3.jpg">
+            <p>週1回の専属コーチ授業で、成長の進捗と課題を確認。<br>
+              学習内容の理解度をチェックし、つまずいた部分は丁寧に解説。<br>
+              次回までに取り組む課題を明確にし、着実なステップアップをサポートします。</p>
+          </div>
+          <div class="flow-item4">
+            <h5 class="item-title">Step4 学習の継続のサポート</h5>
+            <img src="img/flow4.jpg">
+            <p>日々の学習と授業を重ねながら、スキルを定着させていきます。<br>
+              習慣として学びが身についたタイミングで、次のステップである案件獲得フェーズへ進みます。</p>
+          </div>
+          <div class="flow-item5">
+            <h5 class="item-title">Step5 案件獲得も徹底サポート</h5>
+            <img src="img/flow5.jpg">
+            <p>スキル習得後は、実際に案件獲得に向けて行動を開始します。<br>
+              プロの営業担当が営業の同行や代行を行い、あなたの初案件獲得をしっかりとサポートします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 講師紹介 -->
+    <section class="instructors" id="instructors">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <p class="right-section-subtitle">instructors</p>
+          <h2 class="right-section-title">講師紹介</h2>
+        </div>
+        <div class="instructors-container">
+          <div class="instructors-item">
+            <div class="instructors-content">
+              <p>トップ講師 加藤 夕騎<br>
+                お客様1人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。<br>
+                プロナビは複数の最適化されたプログラミング学習トレーニングの中から、お客さま一人ひとりの目的や課題に合った組み合わせをカリキュラムとして提供します。<br>
+                それぞれのトレーニングを構築する際は、学術的な調査はもちろんのこと、学習の中で本当に効果があるのかをコンサルタント・お客さまなど様々な視点から十分な時間をかけて検証した上で展開しています。<br>
+                四半期に一度、カリキュラムを全社的にアップデートするイベントを設けており、トレーニングやカリキュラムを常に進化させ続けています。</p>
+              <img src="img/teacher.jpg">
+            </div>
+          </div>
+          <div class="instructors-item2">
+            <div class="instructors-content2">
+              <p>現役エンジニア講師 TESTU<br>
+                その人にとって継続可能かつ、 着実にスキルをつけられるような学習方法を 一緒に探し続けます。<br>
+                プログラミング学習は筋トレに似ていると思います。<br>
+                人それぞれ体格も違えば、やるべき事も変わってくる。<br>
+                間違ったやり方で筋トレをし続けても結果には繋がりにくい。正しいやり方と継続がとても重要です。<br>
+                その人にとって継続可能かつ、しっかり最適な負荷をかけ続ける学習方法を一緒に探し続けます！</p>
+              <img src="img/teacher1.jpg">
+            </div>
+          </div>
+          <div class="instructors-item3">
+            <div class="instructors-content">
+              <p>現役エンジニア講師 YURIKO<br>
+                プログラミングスキルを習得するには 環境×覚悟が必要だと思っています。<br>
+                世の中には数多くの学習教材や学習方法が溢れていますが、プロナビはあなたの目標を最短で達成するためにはどの手段を取ることが正しいのか、忙しいあなたでも学習が継続できるような仕組みや環境を提供します。<br>
+                「スキルを伸ばす」その覚悟を持っていただければ、私たちコンサルタント一同、全力で、最短でプログラミングスキルを伸ばすサポートをさせていただきます！</p>
+              <img src="img/teacher2.jpg">
+            </div>
+          </div>
+          <div class="instructors-item4">
+            <div class="instructors-content2">
+              <p>現役エンジニア講師 AOKI<br>
+                卒業後も自分の力で成長していけるような 学習スキルも同時に身につけて欲しい<br>
+                プログラミングは多くの言語があり、使われる言語の変化も早いです。<br>
+                そのため、実際に仕事をするときに新しい知識が必要になってくることもあるため、ただ覚えるだけではなく、自分の力で学習を進めていく能力も半年間を通して身につけていただきたいと思っています。</p>
+              <img src="img/teacher3.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#" class="about-btn btn-gradient section-wrapper">
+      <span>無料カウンセリングを予約する</span>
+    </a>
+
+    <!-- our support -->
+    <section id="support">
+      <div class="bg-logo">
+        <p>Pro Navi</p>
+      </div>
+
+      <div class="support-head-bg">
+        <img src="img/support_bg.svg">
+      </div>
+      <div class="support">
+        <div class="section-wrapper">
+          <div class="support-title-box">
+            <p class="support-title">our support</p>
+            <p class="support-text">学習をスムーズに進めるための「効率的な学習環境」
+              <br>プロナビでは、テクノロジーと伴走サポートで
+              <br>あなたの「学習効率」と「時間の価値」を最大化します
+            </p>
+          </div>
+
+          <ul class="support-contents">
+            <li>
+              <div class="support-subtitle">
+                <p class="support-subtitle-left">POINT1</p>
+                <p class="support-subtitle-right">学習スケジュールを毎週管理</p>
+              </div>
+
+              <div class="support-content">
+                <div class="support-content-left">
+                  <p>毎週の目標を立て、担当コーチと進捗を共有。</p>
+                  <p>1週間ごとに振り返りとフィードバックで、成長を実感できます</p>
+
+                  <button class="btn detail-btn">詳しく見る</button>
+
+                  <div class="detail-text">
+                    <p>授業ごとに1週間の学習スケジュールを作成し、公式LINEで日々の進捗を共有します。</p>
+                    <p>専属コンサルタントが学習の課題を分析し、次週の改善に繋げます。</p>
+                  </div>
+                </div>
+
+                <div class="support-content-right">
+                  <img src="img/point1.png">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="support-subtitle">
+                <p class="support-subtitle-left">POINT2</p>
+                <p class="support-subtitle-right">公式LINEで24時間質問可能</p>
+              </div>
+
+              <div class="support-content">
+                <div class="support-content-left">
+                  <p>「わからない」をすぐに解決。</p>
+                  <p>いつでもコーチに質問できるから、つまずかずに学習が続く。</p>
+
+                  <button class="btn detail-btn">詳しく見る</button>
+
+                  <div class="detail-text">
+                    <p>担当コーチが24時間公式LINEで質問対応。</p>
+                    <p>理解できない箇所をその場で解消し、効率的にステップアップできる環境を整えています。</p>
+                  </div>
+                </div>
+
+                <div class="support-content-right">
+                  <img src="img/point2.png">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="support-subtitle">
+                <p class="support-subtitle-left">POINT3</p>
+                <p class="support-subtitle-right">案件獲得のサポートも充実</p>
+              </div>
+
+              <div class="support-content">
+                <div class="support-content-left">
+                  <p>学習後も安心。</p>
+                  <p>プロの営業マンがあなたの初案件獲得まで伴走します。</p>
+
+                  <button class="btn detail-btn">詳しく見る</button>
+
+                  <div class="detail-text">
+                    <p>学習後の営業同行や実践的なアドバイスで、初めての案件獲得を徹底支援。</p>
+                  </div>
+                </div>
+
+                <div class="support-content-right">
+                  <img src="img/point3.png">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="support-subtitle">
+                <p class="support-subtitle-left">POINT4</p>
+                <p class="support-subtitle-right">助け合える環境</p>
+              </div>
+
+              <div class="support-content">
+                <div class="support-content-left">
+                  <p>プロナビには、アバターで参加できるオンライン作業会「メタリーフ」があります。</p>
+
+                  <button class="btn detail-btn">詳しく見る</button>
+
+                  <div class="detail-text">
+                    <p>同じフェーズの仲間や、すでに案件獲得している先輩とも気軽に交流できます。</p>
+                    <p>質問したり励まし合ったりしながら、1人では続けにくい学習も前向きに取り組めます。</p>
+                    <p>さらにオフライン交流会も定期的に開催され、講師や仲間と直接つながる機会も豊富。</p>
+                    <p>学習継続のモチベーションを高める、安心して参加できるコミュニティです。</p>
+                  </div>
+                </div>
+
+                <div class="support-content-right">
+                  <img src="img/point4.png">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- wrapper 閉じ -->
+
+        <div class="support-slider">
+          <div class="img-wrap">
+            <div class="img-bg"></div>
+            <img src="img/support1.png">
+          </div>
+          <div class="img-wrap">
+            <div class="img-bg"></div>
+            <img src="img/support2.png">
+          </div>
+          <div class="img-wrap">
+            <div class="img-bg"></div>
+            <img src="img/support3.png">
+          </div>
+          <div class="img-wrap">
+            <div class="img-bg"></div>
+            <img src="img/support4.png">
+          </div>
+          <div class="img-wrap">
+            <div class="img-bg"></div>
+            <img src="img/support5.png">
+          </div>
+        </div>
+
+        <a href="#" class="support-btn btn-gradient section-wrapper">
+          <span>無料カウンセリングを予約する</span>
+        </a>
+
+        <!-- 卒業生の実績 -->
+        <div class="graduate-achievements">
+          <div class="section-wrapper">
+            <div class="section-header">
+              <p class="section-subtitle">Graduate Achievements</p>
+              <h2 class="section-title">卒業生の実績</h2>
+            </div>
+
+            <div class="graduate-achievements-slider section-wrapper">
+              <div><img src="img/achievement1.png"></div>
+              <div><img src="img/achievement2.png"></div>
+              <div><img src="img/achievement3.png"></div>
+              <div><img src="img/achievement4.png"></div>
+              <div><img src="img/achievement5.png"></div>
+              <div><img src="img/achievement6.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金 -->
+    <section class="price" id="price">
+      <div class="price-header section-wrapper">
+        <p class="right-section-subtitle">Pricing</p>
+        <h2 class="right-section-title">料金</h2>
+      </div>
+
+      <div class="price-container">
+        <div class="price-contents section-wrapper">
+          <h3 class="price-title">６ヶ月間集中プログラム</h3>
+          <ul class="price-content">
+            <li>24時間質問対応</li>
+            <li>あなただけの学習スケジュールを作成</li>
+            <li>定期的な講義で苦手を克服</li>
+            <li>学習スケジュール作成と習慣化のサポート</li>
+          </ul>
+          <div class="price-detail">
+            <p class="price-detail-left">総額</p>
+            <span>550,000円</span>
+            <p class="price-detail-right">（税込）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <a href="#" class="price-btn btn-gradient section-wrapper">
+      <span>無料カウンセリングを予約する</span>
+    </a>
+
+    <!-- 質問 -->
+    <section class="faq-section section-wrapper" id="faq">
+      <div class="section-header">
+        <p class="section-subtitle">FAQ</p>
+        <h2 class="section-title">質問</h2>
+      </div>
+
+      <div class="faq-contents">
+        <div class="faq">
+          <h3 class="faq-title">
+            Q1<br>従来のプログラミングスクールとは何が違いますか？
+          </h3>
+          <p class="faq-text">
+            プログラミングスクールの多くは「コードを知る」ことに主眼をおいていますが、
+            プロナビでは模写コーディングを含む複数のトレーニングを組み合わせてお客様ごとの最適カリキュラムをご提案します。
+            また、日々の学習を支援する多彩なサポートを用意しています。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">
+            Q2<br>どんな教材を使用しますか？
+          </h3>
+          <p class="faq-text">
+            当社が厳選した市販教材とオリジナル教材の中から、お客様にとって最適な組み合わせをご提案します。
+            どのような教材を用いるかは無料カウンセリングにてお問い合わせください。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">
+            Q3<br>専属コンサルタントは変えられますか？
+          </h3>
+          <p class="faq-text">
+            可能です。ご希望の場合は、公式事務局LINEまでお問い合わせください。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">
+            Q4<br>パソコンは必要ですか？
+          </h3>
+          <p class="faq-text">
+            プログラミングの学習ではパソコンは必須になります。貸し出しなどは行っていないため、ご用意必要になります。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">
+            Q5<br>学習時間が確保できるか不安ですが、大丈夫ですか？
+          </h3>
+          <p class="faq-text">
+            ご安心ください。多くの方が最初は不安を感じていますが、専属コンサルタントのタイムマネジメントやモチベーション管理などのきめ細かいサポートで、実際に激務の中で働いている方もプログラミングスキルを向上されています。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">
+            Q6<br>校舎に通うのが難しいのですが、大丈夫ですか？
+          </h3>
+          <p class="faq-text">
+            基本的にオンライン受講となっています。対面受講の場合と同等のプログラミングスキル上達の実績を上げております。
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="button_top">TOP</a>
+
+  <footer>
+    <div class="footer-img-box">
+      <img src="img/footer4.svg">
+    </div>
+
+    <div class="footer-info">
+      <div class="section-wrapper">
+        <div class="footer-logo-box">
+          <img src="img/footer_logo2.png">
+        </div>
+
+        <p class="footer-address">
           〒000-0000<br>
           愛知県〇〇区〇〇0-0-0<br>
           ○○ビル ○F
-          </p>
-        
-          <div class="footer-sns-content">
-            <p>Follow us on Instagram</p>
-            <ul class="footer-sns">
-              <li class="footer-sns-item">
-                <span class="footer-name">Kakashi</span>
-                <a href="#" class="footer-icon">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
+        </p>
 
-              <li class="footer-sns-item">
-                <span class="footer-name">iruka</span>
-                <a href="#" class="footer-icon">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="footer-sns-content">
+          <p>Follow us on Instagram</p>
+          <ul class="footer-sns">
+            <li class="footer-sns-item">
+              <span class="footer-name">Kakashi</span>
+              <a href="#" class="footer-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+
+            <li class="footer-sns-item">
+              <span class="footer-name">iruka</span>
+              <a href="#" class="footer-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      
-      <div class="footer-copy-box">
-        <p class="footer-copy section-wrapper">&copy; ProNavi</p>
-      </div>
-    </footer>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-    <!-- slick JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+    <div class="footer-copy-box">
+      <p class="footer-copy section-wrapper">&copy; ProNavi</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <!-- slick JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>
