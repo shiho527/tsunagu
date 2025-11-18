@@ -24,7 +24,7 @@ img {
 }
 
 /* ================================
-  タイトル（左側）
+  タイトル
 ================================ */
 
 .section-title {
@@ -57,30 +57,12 @@ img {
   タイトル（右側）
 ================================ */
 
-.right-section-title {
-  font-size: 25px;
-  margin-bottom: 10px;
-  font-weight: 400;
-  text-align: right;
-}
-
-.right-section-subtitle {
-  position: relative;
-  font-size: 14px;
-  padding-right: 60px;
-  text-align: right;
-  color: #00a9ff;
-}
-
-.right-section-subtitle::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 2px;
-  background-color: #99cc65;
+#voice .section-header,
+#instructors .section-header,
+#price .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* ← 右寄せ */
 }
 
 /* ================================
@@ -408,6 +390,7 @@ main {
 .reason-title {
   display: flex;
   margin: 10px 0;
+  font-weight: 600;
 }
 
 .reason-title h3 {
@@ -627,6 +610,7 @@ support
 
 .support-head-bg img {
   display: block;
+  margin-top: 30px;
 }
 
 .support {
@@ -1189,12 +1173,20 @@ footer {
 ============================== */
 @media (max-width: 768px) {
   /* 共通 */
+  #voice .section-header,
+  #instructors .section-header,
+  #price .section-header {
+    align-items: flex-start; /* ← 左寄せに戻す */
+  }
+
+
   .about-btn {
     display: block;
     width: 80%;
     margin-top: 80px;
     text-align: center;
   }
+
   /* header */
   /*ハンバーガーメニュー*/
   .nav-menu ul {
@@ -1301,9 +1293,11 @@ footer {
 
   /* main */
   /* mainvisual */
-.hero-bg {
-  background-position: 45% 50%; 
-}
+  .hero-bg {
+    background-position: 45% 50%; 
+    background-size: 130%; /* ← まずはこれで試す*/
+  }
+
 
 
   /* about */
@@ -1640,6 +1634,9 @@ support
   /* ------------------------------
 price
 ------------------------------ */
+  .price-contents {
+    margin: 0 20px;
+  }
 
   .price-content {
     grid-template-columns: 1fr;
@@ -1679,7 +1676,7 @@ footer
 
 
 /* ページトップボタン削除 */
-.button_top {
-  display: none !important;
-}
+  .button_top {
+    display: none !important;
+  }
 }
