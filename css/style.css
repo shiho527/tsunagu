@@ -19,8 +19,24 @@ img {
 .section-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.section-wrapper p,
+p {
+  font-size: 18px;
+  line-height: 1.5;  
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.section-header h2,
+h2 {
+  color: #222;
+  font-size: 32px;
+  margin-bottom: 32px;
+  font-weight: 700; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+  line-height: 1.4;
 }
 
 /* ================================
@@ -29,16 +45,19 @@ img {
 
 .section-title {
   text-align: left;
-  font-size: 25px;
-  margin-bottom: 10px;
-  font-weight: 400; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+  font-size: 32px;
+  margin-bottom: 32px;
+  font-weight: 700; /* 太さ調整（400=標準, 500=中太, 700=太字） */
+  line-height: 1.4;
+  color: #222;
 }
 
 .section-subtitle {
   text-align: left;
   position: relative;
-  font-size: 14px;
+  font-size: 20px;
   padding-left: 60px;
+  margin-bottom: 12px;
   color: #00a9ff;
 }
 
@@ -463,7 +482,9 @@ main {
 }
 
 .reason-title h3 {
+  font-size: 22px;
   margin-left: 70px;
+  color: #222;
 }
 
 .reason-heading {
@@ -475,6 +496,7 @@ main {
   display: flex;
   width: 80%;
   margin: 0 auto;
+  gap: 40px;
   justify-content: space-between;
 }
 
@@ -611,6 +633,11 @@ main {
   margin: 5px 0;
 }
 
+.item-title h5 {
+  font-size: 18px;
+  color: #222;
+}
+
 /* instructors */
 .instructors-item,
 .instructors-item2,
@@ -732,8 +759,9 @@ support
 }
 
 .support-subtitle {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
   display: flex;
 }
 
@@ -750,36 +778,9 @@ support
   line-height: 2;
 }
 
-/* 詳しく見るボタン */
-/* .support .btn { */
-/* position: relative; */
-/* display: inline-block; */
-/* padding: 12px 28px; */
-/* border-radius: 30px; */
-/* background: linear-gradient(90deg, #66ccff, #00a9ff); */
-/* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
-/* color: #fff; */
-/* font-weight: 500; */
-/* text-decoration: none; */
-/* font-size: 14px; */
-/* overflow: hidden; */
-/* transition: all 0.2s ease; */
-/* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
-/* margin-top: 20px; */
-/* } */
-
 .detail-btn {
   display: none;
 }
-
-/* 詳しく見るボタン　アコーディオン */
-
-/* .detail-text { */
-/* display: none; */
-/* margin-top: 15px; */
-/* line-height: 1.6; */
-
-/* } */
 
 /* 追加の装飾たち */
 .support-content {
@@ -861,10 +862,6 @@ section,
 /* ------------------------------
 卒業生の実績 graduate-achievements
 ------------------------------ */
-
-/* .graduate-achievements { */
-/* overflow-x: hidden; */
-/* } */
 
 .graduate-achievements .section-header {
   margin-top: 150px;
@@ -1253,6 +1250,24 @@ footer {
     width: 80%;
     margin-top: 80px;
     text-align: center;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .section-wrapper {
+    padding: 40px 24px;
   }
 
   /* header */
