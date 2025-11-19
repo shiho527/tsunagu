@@ -432,6 +432,7 @@ main {
   height: auto;
   border-radius: 50%;
   border: 4px solid #99cc65;
+  object-fit: cover;
 }
 
 .voice-box {
