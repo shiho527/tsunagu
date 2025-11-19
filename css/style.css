@@ -66,7 +66,7 @@ img {
 }
 
 /* ================================
-  無料カウンセリングボタン（微光）
+  無料カウンセリングボタン（ギラギラver）
 ================================ */
 .btn-gradient {
   position: relative;
@@ -75,52 +75,70 @@ img {
   border-radius: 30px;
   background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
   color: #fff;
-  font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   overflow: hidden;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 12px rgba(0, 153, 204, 0.5),   /* 外周の青い光 */
+    0 4px 10px rgba(0, 153, 204, 0.25);
 }
 
-/* ✨控えめな光の筋 */
+/* ✨ メインのキラッと光 */
 .btn-gradient::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -130%;
-  width: 40%;  /* ←細くして控えめに */
+  left: -150%;
+  width: 60%; /* ←太くして存在感UP */
   height: 100%;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.25) 50%, /* ←光を弱めに */
+    rgba(255, 255, 255, 0.55) 50%, /* ←光を強める！ */
     rgba(255, 255, 255, 0) 100%
   );
   transform: skewX(-25deg);
+  animation: shine-strong 2.8s infinite ease-in-out; /* ←速度も速くしてキラッ感 */
+}
 
-  /* ゆったり流れる微光 */
-  animation: shine-soft 4.8s infinite ease-in-out;
+/* ✨ サブ光（ほんの少しだけ追加） */
+.btn-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine-sub 4.2s infinite ease-in-out;
 }
 
 .btn-gradient:hover {
-  opacity: 0.95;
+  opacity: 1;
+  box-shadow:
+    0 0 18px rgba(0, 153, 204, 0.7),  /* 光量UP */
+    0 5px 14px rgba(0, 153, 204, 0.4);
 }
 
-.btn-gradient:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 5px rgba(0, 153, 204, 0.3);
+/* キラキラ強めの動き */
+@keyframes shine-strong {
+  0% { left: -150%; }
+  100% { left: 180%; }
 }
 
-/* ゆっくり控えめな動き */
-@keyframes shine-soft {
-  0% {
-    left: -130%;
-  }
-  100% {
-    left: 150%;
-  }
+@keyframes shine-sub {
+  0% { left: -200%; }
+  100% { left: 200%; }
 }
+
+
 
 
 /* header */
@@ -207,7 +225,7 @@ main {
 /* mainvisual */
 .mainvisual {
   /* padding-left: 16%; */
-  margin-bottom:100px;
+  margin-bottom: 100px;
 }
 
 .hero {
@@ -239,9 +257,9 @@ main {
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(255,255,255,0.05) 0%,
-    rgba(255,255,255,0.1) 50%,
-    rgba(255,255,255,0.05) 100%
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -251,32 +269,33 @@ main {
 
 /* キャッチコピー */
 .hero-content {
-  position: absolute;  /* relative → absolute に変更 */
-  top: 50%;            /* 垂直中央 */
-  left: 50%;           /* 横中央 */
+  position: absolute; /* relative → absolute に変更 */
+  top: 50%; /* 垂直中央 */
+  left: 50%; /* 横中央 */
   transform: translate(-50%, -50%); /* 中心に配置 */
   z-index: 3;
   text-align: center;
   color: #fff;
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  margin-top: 60px;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-shadow:
-    /* 0 0 5px rgba(255,255,255,0.3),    */
-    0 0 10px rgba(255,255,255,0.3),  
-    0 0 20px rgba(255,255,255,0.2); 
+    /* 0 0 5px rgba(255,255,255,0.3),    */ 0 0 10px
+      rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  margin-bottom:30px;
+  margin-bottom: 15px;
   text-shadow:
-    /* 0 0 5px rgba(255,255,255,0.3),    */
-    0 0 10px rgba(255,255,255,0.3),  
-    0 0 20px rgba(255,255,255,0.2);  
+    /* 0 0 5px rgba(255,255,255,0.3),    */ 0 0 10px
+      rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .hero-content .btn {
@@ -286,6 +305,55 @@ main {
   font-size: 18px;
 }
 
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 15px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff; /* 白文字推奨 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.features p {
+  position: relative;
+  padding: 0.3em 0 0.2em 1.2em;
+  border-bottom: 3px solid #2589d0;
+  color: #005ac6; /* 青に変更して視認性UP */
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.features p::before {
+  position: absolute;
+  top: 0;
+  left: 0.3em;
+  transform: rotate(55deg);
+  height: 11px;
+  width: 12px;
+  background: #2589d0;
+  content: "";
+}
+
+.features p::after {
+  position: absolute;
+  transform: rotate(15deg);
+  top: 0.6em;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  background: #2589d0;
+  content: "";
+}
 
 /* about */
 #about {
@@ -573,7 +641,7 @@ main {
 
 #instructors img {
   width: 35%;
-  filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25));
+  filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.25));
 }
 
 .instructors-item img,
@@ -1179,7 +1247,6 @@ footer {
     align-items: flex-start; /* ← 左寄せに戻す */
   }
 
-
   .about-btn {
     display: block;
     width: 80%;
@@ -1294,11 +1361,9 @@ footer {
   /* main */
   /* mainvisual */
   .hero-bg {
-    background-position: 45% 50%; 
+    background-position: 45% 50%;
     background-size: 130%; /* ← まずはこれで試す*/
   }
-
-
 
   /* about */
   .about-inner {
@@ -1375,15 +1440,14 @@ footer {
     margin-bottom: 20px;
   }
   .reason-item {
-    display: flex;           /* ← flex のままにする */
-    flex-direction: column;  /* ← これが効くようになる */
+    display: flex; /* ← flex のままにする */
+    flex-direction: column; /* ← これが効くようになる */
   }
 
   #reason img {
     display: block;
     margin: 0 auto;
   }
-
 
   /* study */
   .study-text,
@@ -1397,7 +1461,7 @@ footer {
     margin: 0 20px;
     padding: 10px;
     border-radius: 20px;
-    }
+  }
 
   .study-img {
     display: block;
@@ -1417,14 +1481,14 @@ footer {
   /* flow */
   /* flow セクションだけ flex を解除 */
   #flow {
-      display: block !important;
+    display: block !important;
   }
 
-  .flow-container{
+  .flow-container {
     display: block;
-    width:100%;
-    position:relative;
-    overflow:hidden;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
   }
 
   /* slick が width を自動計算するので width は書かない */
@@ -1432,9 +1496,9 @@ footer {
   .flow-item2,
   .flow-item3,
   .flow-item4,
-  .flow-item5{
-    padding:20px;
-    box-sizing:border-box;
+  .flow-item5 {
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   #flow .item-title {
@@ -1447,40 +1511,44 @@ footer {
   }
 
   /* 画像を画面に収める */
-  #flow img{
-    width:100%;
-    height:auto;
-    display:block;
+  #flow img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* slick-slide に横並びするための基本設定 */
-  .slick-slide{
-    box-sizing:border-box;
+  .slick-slide {
+    box-sizing: border-box;
   }
 
   /* ドットの余白が大きくなり過ぎる問題を防ぐ */
-  .slick-dots{
+  .slick-dots {
     bottom: -10px;
   }
 
   /* 矢印ボタン */
-  .flow-prev, .flow-next{
-    background:#99cc65;
-    color:#fff;
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:absolute;
-    top:40%;
-    z-index:999;
-    cursor:pointer;
+  .flow-prev,
+  .flow-next {
+    background: #99cc65;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    cursor: pointer;
   }
-  .flow-prev{ left:10px; }
-  .flow-next{ right:10px; }
-  
+  .flow-prev {
+    left: 10px;
+  }
+  .flow-next {
+    right: 10px;
+  }
 
   /* instructors */
   .instructors-content,
@@ -1644,16 +1712,16 @@ price
     grid-template-columns: 1fr;
   }
 
-.price-btn {
-  display: block;
-  width: 80%;
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
+  .price-btn {
+    display: block;
+    width: 80%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 
-/* ------------------------------
+  /* ------------------------------
 faq 
 -------------------------------*/
 
@@ -1676,8 +1744,7 @@ footer
     margin-block: 50px;
   }
 
-
-/* ページトップボタン削除 */
+  /* ページトップボタン削除 */
   .button_top {
     display: none !important;
   }
