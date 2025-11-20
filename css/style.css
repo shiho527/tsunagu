@@ -365,6 +365,8 @@ main {
   color: #fff; /* 白文字推奨 */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+  opacity: 0;
+  animation: popup 0.6s ease forwards;
 }
 
 .features p {
@@ -399,17 +401,69 @@ main {
   content: "";
 }
 
+/* ポップアップアニメーション */
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 複数カードを "少しずつ遅らせて" 出す（）*/
+.feature-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.feature-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
 .batch {
-  text-align: center; 
+  position: relative;
+  text-align: center;
   margin-top: 20px;
+  width: 100%; /* 中央に配置するため画像を包む幅を維持 */
 }
 
 .batch img {
-  display: block;    
-  max-width: 90%;      
-  width: 400px;       
-  height: auto;   
-  margin: 0 auto; 
+  display: block;
+  max-width: 90%;
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* キラッと光るエフェクト */
+.batch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 2.8s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  50% { left: 120%; }
+  100% { left: 120%; }
 }
 
 /* about */
