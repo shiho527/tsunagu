@@ -671,7 +671,8 @@ main {
 }
 
 .study-characters {
-  width: 30%;
+  /* width: 30%; */
+  width: 35%;
 }
 
 .study-characters img {
