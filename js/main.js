@@ -16,6 +16,7 @@ $(function () {
   });
 });
 
+// mainvisual
 $(function () {
   var $window = $(window);
   var $hero = $(".hero");
@@ -26,23 +27,13 @@ $(function () {
 
   var images;
 
-  // 初期化・画面幅で画像を切り替え
   function setImages() {
-    if ($(window).width() <= 768) {
-      // スマホ用画像
-      images = [
-        "img/mainvisual1-sp.png",
-        "img/mainvisual2-sp.png",
-        "img/mainvisual3-sp.png",
-      ];
-    } else {
-      // PC用画像
-      images = [
-        "img/mainvisual1.png",
-        "img/mainvisual2.png",
-        "img/mainvisual3.png",
-      ];
-    }
+    // 常にPC用画像
+    images = [
+      "img/mainvisual1.png",
+      "img/mainvisual2.png",
+      "img/mainvisual3.png",
+    ];
   }
 
   setImages(); // 初回設定
