@@ -25,7 +25,7 @@ img {
 .section-wrapper p,
 p {
   font-size: 18px;
-  line-height: 1.5;  
+  line-height: 1.5;
   line-height: 1.6;
   letter-spacing: 0.02em;
 }
@@ -98,9 +98,8 @@ h2 {
   font-size: 14px;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow:
-    0 0 12px rgba(0, 153, 204, 0.5),   /* 外周の青い光 */
-    0 4px 10px rgba(0, 153, 204, 0.25);
+  box-shadow: 0 0 12px rgba(0, 153, 204, 0.5),
+    /* 外周の青い光 */ 0 4px 10px rgba(0, 153, 204, 0.25);
 }
 
 /* ✨ メインのキラッと光 */
@@ -114,8 +113,8 @@ h2 {
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.55) 50%, /* ←光を強める！ */
-    rgba(255, 255, 255, 0) 100%
+    rgba(255, 255, 255, 0.55) 50%,
+    /* ←光を強める！ */ rgba(255, 255, 255, 0) 100%
   );
   transform: skewX(-25deg);
   animation: shine-strong 2.8s infinite ease-in-out; /* ←速度も速くしてキラッ感 */
@@ -141,36 +140,63 @@ h2 {
 
 .btn-gradient:hover {
   opacity: 1;
-  box-shadow:
-    0 0 18px rgba(0, 153, 204, 0.7),  /* 光量UP */
-    0 5px 14px rgba(0, 153, 204, 0.4);
+  box-shadow: 0 0 18px rgba(0, 153, 204, 0.7),
+    /* 光量UP */ 0 5px 14px rgba(0, 153, 204, 0.4);
 }
 
 /* キラキラ強めの動き */
 @keyframes shine-strong {
-  0% { left: -150%; }
-  100% { left: 180%; }
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 180%;
+  }
 }
 
 @keyframes shine-sub {
-  0% { left: -200%; }
-  100% { left: 200%; }
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+  }
 }
 
-
-
-
 /* header */
-#header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #fff;
   z-index: 1000;
+  height: 80px;
 }
 
-#header .section-wrapper {
+/* .header .section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+} */
+
+/* header の section-wrapper だけ padding を0にする */
+.header .section-wrapper {
+  max-width: none; /* → ヘッダーだけ画面いっぱい */
+  width: 100%;
+  padding: 0 0; /* → 余白を削除 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 中身を中央の1200px幅に整えるための"内ラッパー"を作る */
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1280,15 +1306,16 @@ footer {
     margin: 0;
     padding: 0; */
   }
+
   .header-right {
     flex-direction: column;
-    width: 400px;
+    width: 380px;
     background-color: #fff;
     padding: 60px;
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -300px;
+    left: -380px;
     opacity: 0;
     transition: 0.5s;
     z-index: 20;
@@ -1298,7 +1325,6 @@ footer {
     pointer-events: none;
   }
 
-  /* ◎ 開いた時だけクリックできるように戻す */
   .open .header-right {
     pointer-events: auto;
   }
@@ -1312,7 +1338,7 @@ footer {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 22px;
     right: 18px;
     z-index: 20;
@@ -1376,9 +1402,62 @@ footer {
 
   /* main */
   /* mainvisual */
-  .hero-bg {
+
+  /* .hero-bg {
     background-position: 45% 50%;
-    background-size: 130%; /* ← まずはこれで試す*/
+    background-size: 130%; ← まずはこれで試す(すみません、一旦修正してます！竹石
+  } */
+
+  .mainvisual {
+    margin-bottom: 0;
+  }
+
+  .hero {
+    height: calc(60vh - 80px);
+  }
+
+  /* 背景画像レイヤー */
+  .hero-bg {
+    height: calc(60vh - 80px);
+  }
+
+  /* 光のフィルム */
+  .hero-film {
+    height: calc(60vh - 80px);
+  }
+
+  /* キャッチコピー */
+  .hero-content {
+    margin-top: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-content .btn {
+    margin-top: 10px;
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  .features {
+    gap: 10px;
+    padding: 20px 10px;
+  }
+
+  .feature-card {
+    padding: 8px;
+  }
+
+  .features p {
+    font-size: 0.8rem;
   }
 
   /* about */
