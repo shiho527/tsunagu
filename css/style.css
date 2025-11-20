@@ -866,13 +866,14 @@ support
 }
 
 .detail-text p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2;
 }
 
-.detail-btn {
-  display: none;
-}
+/* 詳しく見るボタン */
+/* .detail-btn { */
+  /* display: none; */
+/* } */
 
 /* 追加の装飾たち */
 .support-content {
@@ -1751,29 +1752,29 @@ support
 ------------------------------ */
 
   /* 詳しく見るボタン */
-  .support .btn {
-    position: relative;
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #66ccff, #00a9ff);
-    background: linear-gradient(45deg, #05a4d6 35%, #005ac6);
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 14px;
-    overflow: hidden;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25);
-    margin-top: 20px;
-  }
+  /* .support .btn { */
+    /* position: relative; */
+    /* display: inline-block; */
+    /* padding: 12px 28px; */
+    /* border-radius: 30px; */
+    /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
+    /* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
+    /* color: #fff; */
+    /* font-weight: 500; */
+    /* text-decoration: none; */
+    /* font-size: 14px; */
+    /* overflow: hidden; */
+    /* transition: all 0.2s ease; */
+    /* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
+    /* margin-top: 20px; */
+  /* } */
 
-  .detail-btn {
-    display: none;
-  }
+  /* .detail-btn { */
+    /* display: none; */
+  /* } */
 
   .detail-text {
-    display: none;
+    display: block;
     margin-top: 15px;
     line-height: 1.6;
   }
