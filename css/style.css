@@ -1713,7 +1713,7 @@ support
   }
 
   .support-title {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .support-text {
@@ -1829,19 +1829,63 @@ faq
   /* ------------------------------
 footer
 ------------------------------- */
-
-  .footer-info .section-wrapper {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  /* 住所やSNSの余白 */
-  .footer-sns-content {
-    margin-block: 50px;
+  footer .section-wrapper {
+    padding: 0 20px;
   }
 
   /* ページトップボタン削除 */
   .button_top {
     display: none !important;
+  }
+}
+
+
+@media (max-width: 375px) {
+  #reason img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .study-phones {
+    flex-direction: column !important; 
+    gap: 20px;
+    align-items: center;
+  }
+
+  .study-phones img {
+    width: 70%;   /* 画像の大きさはここで調整 */
+    height: auto;
+  }
+
+  .study-phones img:nth-child(2),
+  .study-phones img:nth-child(3) {
+    display: none;
+  }
+
+
+  .footer-logo-box {
+    width: 150px;
+    height: auto;
+  }
+
+  footer img {
+    width: 60%;
+    height: auto;
+  }
+
+  footer .section-wrapper {
+    padding: 0 20px;
+  }
+
+  .footer-info .section-wrapper {
+    flex-direction: column;     /* ← 横並び → 縦並び */
+    align-items: center;        /* 中央寄せ */
+    text-align: center;         /* テキスト中央寄せ */
+  }
+
+  .footer-address {
+    margin-bottom: 5px;        
   }
 }
