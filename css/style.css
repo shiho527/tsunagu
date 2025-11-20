@@ -1413,17 +1413,18 @@ footer {
   }
 
   .hero {
-    height: calc(60vh - 80px);
+    height: calc(80vh - 80px);
   }
 
   /* 背景画像レイヤー */
   .hero-bg {
-    height: calc(60vh - 80px);
+    height: calc(80vh - 80px);
+    background-position: 45% 50%;
   }
 
   /* 光のフィルム */
   .hero-film {
-    height: calc(60vh - 80px);
+    height: calc(80vh - 80px);
   }
 
   /* キャッチコピー */
