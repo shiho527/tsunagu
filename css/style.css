@@ -269,8 +269,7 @@ main {
 
 /* mainvisual */
 .mainvisual {
-  /* padding-left: 16%; */
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .hero {
@@ -400,6 +399,19 @@ main {
   content: "";
 }
 
+.batch {
+  text-align: center; 
+  margin-top: 20px;
+}
+
+.batch img {
+  display: block;    
+  max-width: 90%;      
+  width: 400px;       
+  height: auto;   
+  margin: 0 auto; 
+}
+
 /* about */
 #about {
   margin-bottom: 100px;
@@ -409,7 +421,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  margin-top: 60px;
+  /* margin-top: 20px; */
 }
 
 .about-text {
