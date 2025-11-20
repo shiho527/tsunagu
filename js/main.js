@@ -112,17 +112,17 @@ $(window).on("scroll", function () {
 });
 
 // our support 詳しく見るボタン
-$(function () {
-  $(".detail-btn").click(function () {
-    $(this).next(".detail-text").slideToggle(300);
+// $(function () {
+  // $(".detail-btn").click(function () {
+    // $(this).next(".detail-text").slideToggle(300);
 
     // ボタンの文言を切り替え（オプション）
-    if ($(this).text() === "詳しく見る") {
-      $(this).text("閉じる");
-    } else {
-      $(this).text("詳しく見る");
-    }
-  });
+    // if ($(this).text() === "詳しく見る") {
+      // $(this).text("閉じる");
+    // } else {
+      // $(this).text("詳しく見る");
+    // }
+  // });
 
   // our support スライダー
   $(".support-slider").slick({
@@ -186,8 +186,8 @@ $(function () {
   $(".button_top").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 600); // ← 600msでふわっと戻る
-  });
 });
+// });
 
 // 受講の流れ レスポンシブ対応
 $(document).ready(function () {
