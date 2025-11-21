@@ -1347,10 +1347,14 @@ footer {
     align-items: flex-start; /* ← 左寄せに戻す */
   }
 
+  #about {
+    margin-bottom: 20px;
+  }
+  
   .about-btn {
     display: block;
     width: 80%;
-    margin-top: 80px;
+    margin-top: 20px;
     text-align: center;
   }
 
@@ -1369,7 +1373,7 @@ footer {
   }
 
   .section-wrapper {
-    padding: 40px 24px;
+    padding: 20px 24px;
   }
 
   /* header */
@@ -1916,6 +1920,10 @@ footer
 }
 
 @media (max-width: 425px) {
+  .section-wrapper {
+      padding: 10px 24px;
+    }
+
   .hero {
     height: calc(80vh - 80px);
   }
