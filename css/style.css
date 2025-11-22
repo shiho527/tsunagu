@@ -1350,7 +1350,7 @@ footer {
   #about {
     margin-bottom: 20px;
   }
-  
+
   .about-btn {
     display: block;
     width: 80%;
@@ -1921,8 +1921,8 @@ footer
 
 @media (max-width: 425px) {
   .section-wrapper {
-      padding: 10px 24px;
-    }
+    padding: 10px 24px;
+  }
 
   .hero {
     height: calc(80vh - 80px);
