@@ -1020,7 +1020,7 @@ section,
 }
 
 .price-container {
-  background-image: url("../img/price_bg_3.png");
+  background-image: url("../img/price_bg_2.png");  /* 仮でプライス２の写真で対応中 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
