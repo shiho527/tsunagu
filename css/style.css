@@ -1798,6 +1798,13 @@ support
     text-align: left;
   }
 
+  /* スライダー画像 */
+  .support-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
   /* ------------------------------
 /* 背景ロゴ設置 */
   /* .bg-logo p { */
