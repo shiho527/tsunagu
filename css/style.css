@@ -21,7 +21,8 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .section-wrapper {
@@ -1418,7 +1419,7 @@ footer {
     position: absolute;
     top: 22px;
     right: 18px;
-    z-index: 20;
+    z-index: 3000;
     transition: 0.5s;
   }
 
