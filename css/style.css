@@ -2,6 +2,7 @@
 /* 共通 */
 body {
   font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
 }
 
 body.open {
@@ -12,6 +13,7 @@ body.open {
 html {
   font-size: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
@@ -1384,13 +1386,13 @@ footer {
 
   .header-right {
     flex-direction: column;
-    width: 380px;
+    width: 80%;
     background-color: #fff;
     padding: 60px;
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -380px;
+    left: -80%;
     opacity: 0;
     transition: 0.5s;
     z-index: 20;
@@ -1489,6 +1491,7 @@ footer {
 
   .hero {
     height: calc(80vh - 80px);
+    border-bottom-left-radius: 40px;
   }
 
   /* 背景画像レイヤー */
