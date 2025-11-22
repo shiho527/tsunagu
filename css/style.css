@@ -182,13 +182,6 @@ h2 {
   height: 80px;
 }
 
-/* .header .section-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-} */
-
 /* header の section-wrapper だけ padding を0にする */
 .header .section-wrapper {
   max-width: none; /* → ヘッダーだけ画面いっぱい */
@@ -640,6 +633,10 @@ main {
   margin-bottom: 20px;
 }
 
+.study-text .bold {
+  font-weight: 700; /* 太字 */
+}
+
 .study-title {
   text-align: center;
   margin-bottom: 30px;
@@ -828,7 +825,6 @@ support
 }
 
 .support-title {
-  font-size: 32px;
   margin-bottom: 20px;
 }
 
@@ -881,11 +877,6 @@ support
   line-height: 2;
 }
 
-/* 詳しく見るボタン */
-/* .detail-btn { */
-/* display: none; */
-/* } */
-
 /* 追加の装飾たち */
 .support-content {
   border-top: 5px solid #7cc5a9;
@@ -905,9 +896,6 @@ support
   width: 100%;
   height: 280px;
   object-fit: cover;
-  /* border-radius: 10px; */
-  /* border-top-left-radius: 30px; */
-  border-bottom-right-radius: 40px;
 }
 
 .support-slider .slick-dots {
@@ -1767,36 +1755,10 @@ footer {
 support
 ------------------------------ */
 
-  /* 詳しく見るボタン */
-  /* .support .btn { */
-  /* position: relative; */
-  /* display: inline-block; */
-  /* padding: 12px 28px; */
-  /* border-radius: 30px; */
-  /* background: linear-gradient(90deg, #66ccff, #00a9ff); */
-  /* background: linear-gradient(45deg, #05a4d6 35%, #005ac6); */
-  /* color: #fff; */
-  /* font-weight: 500; */
-  /* text-decoration: none; */
-  /* font-size: 14px; */
-  /* overflow: hidden; */
-  /* transition: all 0.2s ease; */
-  /* box-shadow: 0 4px 10px rgba(0, 153, 204, 0.25); */
-  /* margin-top: 20px; */
-  /* } */
-
-  /* .detail-btn { */
-  /* display: none; */
-  /* } */
-
   .detail-text {
     display: block;
     margin-top: 15px;
     line-height: 1.6;
-  }
-
-  .support-title {
-    font-size: 30px;
   }
 
   .support-text {
@@ -1968,20 +1930,7 @@ footer
     display: none;
   }
 
-  /* .features {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 20px 10px;
-  }
-
-  .feature-card {
-    padding: 8px;
-  }
-
-  .features p {
-    font-size: 0.8rem;
-  } */
-
+  /* reason画像 */
   #reason img {
     display: block;
     margin: 0 auto;
@@ -1989,6 +1938,7 @@ footer
     height: auto;
   }
 
+  /* スマホ画像の部分 */
   .study-phones {
     flex-direction: column !important;
     gap: 20px;
@@ -2005,6 +1955,7 @@ footer
     display: none;
   }
 
+  /* footer高さ調整 */
   .footer-logo-box {
     width: 150px;
     height: auto;
