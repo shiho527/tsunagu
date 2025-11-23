@@ -17,7 +17,6 @@ $(function () {
 });
 
 // mainvisual
-// mainvisual
 $(function () {
   var $window = $(window);
   var $hero = $(".hero");
@@ -75,9 +74,33 @@ $(function () {
     $bg2.css("background-image", `url(${images[current]})`);
   });
 
-  // ===========================
-  // スクロール連動（既存コード）
-  // ===========================
+  // ============================================
+  // ★★★ スマホは初期位置固定＆scroll動作OFF ★★★
+  // ============================================
+  var isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // transform を常に中心に固定
+    $content.css({
+      transform: "translate(-50%, -50%)",
+      opacity: 1,
+    });
+
+    // 背景・フィルムの動きも固定
+    $bg1.css({ opacity: 1 });
+    $bg2.css({ opacity: 0 });
+    $film.css({ transform: "translate(0, 0)" });
+
+    // スクロールイベントを完全にオフにする
+    $window.off("scroll");
+
+    // ここで return して以降のPC用スクロール処理を無効化
+    return;
+  }
+
+  // ===========================================
+  // PC用：スクロール連動（スマホでは無効）
+  // ===========================================
   $window.on("scroll", function () {
     var scrollTop = $window.scrollTop();
     var heroHeight = $hero.outerHeight();
@@ -96,28 +119,6 @@ $(function () {
     var filmX = scrollTop * 0.05;
     var filmY = scrollTop * 0.08;
     $film.css("transform", `translate(${filmX}px, ${filmY}px)`);
-  });
-
-  // ============================================
-  // ★★★ hero-content 初期位置のズレを直すコード ★★★
-  // ============================================
-  function updateHeroPosition() {
-    var scrollTop = $(window).scrollTop();
-    var translateY = scrollTop * 0.3;
-
-    $content.css({
-      transform: "translate(-50%, calc(-50% + " + translateY + "px))",
-    });
-  }
-
-  // ページ読み込み直後に実行
-  $(window).on("load", function () {
-    updateHeroPosition();
-  });
-
-  // 念のためリサイズ時にも実行
-  $(window).on("resize", function () {
-    updateHeroPosition();
   });
 });
 
