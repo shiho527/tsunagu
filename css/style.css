@@ -1943,7 +1943,7 @@ footer
     width: 100%;
     left: 50%;
     transform: translateX(-50%); /* Y方向センタリングを解除 */
-    top: 40%;                    
+    top: 50%;                    
     padding: 0 20px;            
     box-sizing: border-box;
   }

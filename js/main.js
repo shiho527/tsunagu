@@ -17,6 +17,7 @@ $(function () {
 });
 
 // mainvisual
+// mainvisual
 $(function () {
   var $window = $(window);
   var $hero = $(".hero");
@@ -70,12 +71,13 @@ $(function () {
   // リサイズ時に画像配列を再設定
   $window.on("resize", function () {
     setImages();
-    // 必要なら表示中の背景も更新
     $bg1.css("background-image", `url(${images[current]})`);
     $bg2.css("background-image", `url(${images[current]})`);
   });
 
-  // スクロール連動（既存のコードそのまま）
+  // ===========================
+  // スクロール連動（既存コード）
+  // ===========================
   $window.on("scroll", function () {
     var scrollTop = $window.scrollTop();
     var heroHeight = $hero.outerHeight();
@@ -95,6 +97,28 @@ $(function () {
     var filmY = scrollTop * 0.08;
     $film.css("transform", `translate(${filmX}px, ${filmY}px)`);
   });
+
+  // ============================================
+  // ★★★ hero-content 初期位置のズレを直すコード ★★★
+  // ============================================
+  function updateHeroPosition() {
+    var scrollTop = $(window).scrollTop();
+    var translateY = scrollTop * 0.3;
+
+    $content.css({
+      transform: "translate(-50%, calc(-50% + " + translateY + "px))",
+    });
+  }
+
+  // ページ読み込み直後に実行
+  $(window).on("load", function () {
+    updateHeroPosition();
+  });
+
+  // 念のためリサイズ時にも実行
+  $(window).on("resize", function () {
+    updateHeroPosition();
+  });
 });
 
 // voice 卒業生の声
@@ -113,79 +137,79 @@ $(window).on("scroll", function () {
 
 // our support 詳しく見るボタン
 // $(function () {
-  // $(".detail-btn").click(function () {
-    // $(this).next(".detail-text").slideToggle(300);
+// $(".detail-btn").click(function () {
+// $(this).next(".detail-text").slideToggle(300);
 
-    // ボタンの文言を切り替え（オプション）
-    // if ($(this).text() === "詳しく見る") {
-      // $(this).text("閉じる");
-    // } else {
-      // $(this).text("詳しく見る");
-    // }
-  // });
+// ボタンの文言を切り替え（オプション）
+// if ($(this).text() === "詳しく見る") {
+// $(this).text("閉じる");
+// } else {
+// $(this).text("詳しく見る");
+// }
+// });
 
-  // our support スライダー
-  $(".support-slider").slick({
-    autoplay: true,
-    autoplaySpeed: 2500, // ← 自動再生の速さ（1.5秒）
-    speed: 500, // ← スライドの切り替え速度（0.5秒）
-    dots: true,
-    arrows: true,
-    slidesToShow: 3, // ← 1画面に3枚
-    slidesToScroll: 1, // ← 1回に1枚ずつ流れる
+// our support スライダー
+$(".support-slider").slick({
+  autoplay: true,
+  autoplaySpeed: 2500, // ← 自動再生の速さ（1.5秒）
+  speed: 500, // ← スライドの切り替え速度（0.5秒）
+  dots: true,
+  arrows: true,
+  slidesToShow: 3, // ← 1画面に3枚
+  slidesToScroll: 1, // ← 1回に1枚ずつ流れる
 
-    responsive: [
-      {
-        breakpoint: 768, // ← スマホ幅（768px以下）
-        settings: {
-          slidesToShow: 1, // ← 1枚表示に変更！
-          arrows: false, // ← ボタン邪魔なら消す（任意）
-        },
+  responsive: [
+    {
+      breakpoint: 768, // ← スマホ幅（768px以下）
+      settings: {
+        slidesToShow: 1, // ← 1枚表示に変更！
+        arrows: false, // ← ボタン邪魔なら消す（任意）
       },
-    ],
-  });
+    },
+  ],
+});
 
-  // 卒業生の実績 スライダー
-  $(".graduate-achievements-slider").slick({
-    autoplay: false,
-    arrows: true,
-    prevArrow:
-      '<button class="graduate-achievements-slide-arrow prev-arrow">◀</button>',
-    nextArrow:
-      '<button class="graduate-achievements-slide-arrow next-arrow">▶</button>',
-    slidesToShow: 3,
+// 卒業生の実績 スライダー
+$(".graduate-achievements-slider").slick({
+  autoplay: false,
+  arrows: true,
+  prevArrow:
+    '<button class="graduate-achievements-slide-arrow prev-arrow">◀</button>',
+  nextArrow:
+    '<button class="graduate-achievements-slide-arrow next-arrow">▶</button>',
+  slidesToShow: 3,
 
-    responsive: [
-      {
-        breakpoint: 768, // ← 768px以下
-        settings: {
-          slidesToShow: 1, // ← 1枚だけ表示
-        },
+  responsive: [
+    {
+      breakpoint: 768, // ← 768px以下
+      settings: {
+        slidesToShow: 1, // ← 1枚だけ表示
       },
-    ],
+    },
+  ],
+});
+
+// 質問 アコーディオン
+const toggles = document.querySelectorAll(".faq-toggle");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    toggle.closest(".faq").classList.toggle("active");
   });
+});
 
-  // 質問 アコーディオン
-  const toggles = document.querySelectorAll(".faq-toggle");
+// トップページに戻るボタン 必ずmain.最後に配置
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 800) {
+    $(".button_top").addClass("show");
+  } else {
+    $(".button_top").removeClass("show");
+  }
+});
 
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      toggle.closest(".faq").classList.toggle("active");
-    });
-  });
-
-  // トップページに戻るボタン 必ずmain.最後に配置
-  $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 800) {
-      $(".button_top").addClass("show");
-    } else {
-      $(".button_top").removeClass("show");
-    }
-  });
-
-  $(".button_top").on("click", function (e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, 600); // ← 600msでふわっと戻る
+$(".button_top").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, 600); // ← 600msでふわっと戻る
 });
 // });
 
