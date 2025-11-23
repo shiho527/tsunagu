@@ -119,6 +119,21 @@ $(function () {
   $(window).on("resize", function () {
     updateHeroPosition();
   });
+
+  // ★ スマホ初期ズレ対策：読み込み直後は必ず translateY = 0 にする
+  function resetHeroPositionInitial() {
+    var isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      $(".hero-content").css({
+        transform: "translate(-50%, -50%)",
+        opacity: 1,
+      });
+    }
+  }
+
+  // load と DOMContentLoaded のどちらでも発火
+  $(window).on("load", resetHeroPositionInitial);
+  $(document).on("DOMContentLoaded", resetHeroPositionInitial);
 });
 
 // voice 卒業生の声
