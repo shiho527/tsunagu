@@ -28,7 +28,6 @@ $(function () {
   var images;
 
   function setImages() {
-    // 常にPC用画像
     images = [
       "img/mainvisual1.png",
       "img/mainvisual2.png",
@@ -36,15 +35,13 @@ $(function () {
     ];
   }
 
-  setImages(); // 初回設定
+  setImages();
 
   var current = 0;
-  var showing = 0; // 0 = bg1, 1 = bg2
+  var showing = 0;
 
-  // 初期画像
   $bg1.css("background-image", `url(${images[0]})`);
 
-  // 背景切替（2枚交互フェード）
   setInterval(function () {
     current = (current + 1) % images.length;
 
@@ -60,14 +57,12 @@ $(function () {
       showing = 0;
     }
 
-    // 背景切替時にフィルム光を少し動かす
     $film.css("transform", "translate(30px, 30px)");
     setTimeout(function () {
       $film.css("transform", "translate(0, 0)");
     }, 800);
   }, 5000);
 
-  // リサイズ時に画像配列を再設定
   $window.on("resize", function () {
     setImages();
     $bg1.css("background-image", `url(${images[current]})`);
@@ -75,31 +70,27 @@ $(function () {
   });
 
   // ============================================
-  // ★★★ スマホは初期位置固定＆scroll動作OFF ★★★
+  // ★★★ スマホは最初から scroll イベントを登録しない！ ★★★
   // ============================================
   var isMobile = window.innerWidth <= 768;
 
   if (isMobile) {
-    // transform を常に中心に固定
+    // ヒーローの位置を完全固定
     $content.css({
       transform: "translate(-50%, -50%)",
       opacity: 1,
     });
 
-    // 背景・フィルムの動きも固定
-    $bg1.css({ opacity: 1 });
-    $bg2.css({ opacity: 0 });
-    $film.css({ transform: "translate(0, 0)" });
+    $bg1.css({ opacity: 1, transform: "none" });
+    $bg2.css({ opacity: 0, transform: "none" });
+    $film.css({ transform: "none" });
 
-    // スクロールイベントを完全にオフにする
-    $window.off("scroll");
-
-    // ここで return して以降のPC用スクロール処理を無効化
+    // ★ scrollイベントは一度も登録しない（重要）
     return;
   }
 
   // ===========================================
-  // PC用：スクロール連動（スマホでは無効）
+  // PC用：スクロール連動
   // ===========================================
   $window.on("scroll", function () {
     var scrollTop = $window.scrollTop();
@@ -107,8 +98,8 @@ $(function () {
     var opacity = 1 - scrollTop / heroHeight;
     if (opacity < 0) opacity = 0;
 
-    $bg1.css("opacity", showing === 0 ? 1 * opacity : 0);
-    $bg2.css("opacity", showing === 1 ? 1 * opacity : 0);
+    $bg1.css("opacity", showing === 0 ? opacity : 0);
+    $bg2.css("opacity", showing === 1 ? opacity : 0);
 
     var translateY = scrollTop * 0.3;
     $content.css({
@@ -121,6 +112,7 @@ $(function () {
     $film.css("transform", `translate(${filmX}px, ${filmY}px)`);
   });
 });
+
 
 // voice 卒業生の声
 
