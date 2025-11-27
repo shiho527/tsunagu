@@ -1996,6 +1996,23 @@ footer
     display: none;
   }
 
+/* our supportレスポンシブ対応 */
+  .support-title-box {
+    text-align: center;
+  }
+
+  .support-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .support-text {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 0 20px;
+    word-break: keep-all; /* 変な改行を防ぐ */
+  }
   /* スライダー画像 */
   .support-slider img {
   width: 100%;
