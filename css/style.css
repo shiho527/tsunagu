@@ -1808,11 +1808,10 @@ support
   object-fit: cover;
 }
 
-  /* ------------------------------
-/* 背景ロゴ設置 */
-  /* .bg-logo p { */
-  /* font-size: 25vw; */
-  /* } */
+  .avatar-slider img {
+  width: 100%;
+  height: 400px;
+}
 
   /* やはり不要 */
   .bg-logo p {
